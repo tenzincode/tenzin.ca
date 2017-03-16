@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: tenzin.blog
-subtitle:
-description:
+title: tenzin namgyal
+subtitle: a web developer
+description: a blog built on hexo
 author: tenzin
 language: english
 timezone: gmt-5
