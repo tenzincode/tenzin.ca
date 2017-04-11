@@ -479,13 +479,13 @@ body {
   background-image: linear-gradient(transparent, transparent 5px, #000 5px, #000);
 }
 .content a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #d480aa 4px, #d480aa);
+  background-image: linear-gradient(transparent, transparent 4px, #7404a4 4px, #7404a4);
 }
 .content a.icon {
   background: none;
 }
 .content a.icon:hover {
-  color: #d480aa;
+  color: #7404a4;
 }
 .content h1 a,
 .content .h1 a,
@@ -508,7 +508,7 @@ body {
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: 100% 6px;
-  background-image: linear-gradient(transparent, transparent 6px, #d480aa 6px, #d480aa);
+  background-image: linear-gradient(transparent, transparent 6px, #7404a4 6px, #7404a4);
 }
 @media (min-width: 540px) {
   .image-wrap {
@@ -663,7 +663,7 @@ body {
   background: none;
 }
 #header-post a.icon:hover {
-  color: #d480aa;
+  color: #7404a4;
 }
 #header-post ol {
   list-style-type: none;
@@ -769,7 +769,7 @@ body {
   padding-top: 1rem;
 }
 #header-post #toc a:hover {
-  color: #d480aa;
+  color: #7404a4;
 }
 #header-post #toc .toc-level-1 {
   display: none;
@@ -860,7 +860,7 @@ body {
   background: none;
 }
 #footer-post a.icon:hover {
-  color: #d480aa;
+  color: #7404a4;
 }
 #footer-post #nav-footer {
   margin-left: 1rem;
@@ -941,7 +941,7 @@ body {
   line-height: 30px;
 }
 #footer-post #toc-footer a:hover {
-  color: #d480aa;
+  color: #7404a4;
 }
 #footer-post #toc-footer .toc-level-1 {
   display: none;

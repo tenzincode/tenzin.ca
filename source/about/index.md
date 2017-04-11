@@ -3,12 +3,15 @@ title: about
 date: 2017-04-09 17:16:10
 ---
 
+<!-- PROFILE PIC -->
 here is an old picture of me
 
 ![alt text](../images/me.png "here is an old picture of me")
 
+<!-- CV -->
 [**→ curriculum vitae** (/kəˈrɪkjᵿləm ˈviːtaɪ/, /ˈwiːtaɪ/, or /ˈvaɪtiː/)](//cv.tenzin.ca)
 
+<!-- GOOGLE MAPS -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm8XpxrP2QYGkoUl7YFyBk8uIqjzWFGTc&extension=.js"></script>
 <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
