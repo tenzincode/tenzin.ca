@@ -2,6 +2,21 @@
    {
       "name":"tenzin.ca",
       "url":"http://tenzin.ca/",
-      "desc":"my homepage built on vue "
+      "desc":"a page built on vue.js"
+   },
+   {
+       "name":"javascript patterns",
+       "url":"https://github.com/citizenofearth/javascript-patterns",
+       "desc":"common patterns in javascript"
+   },
+   {
+       "name":"ecmascript 6 features",
+       "url":"https://github.com/citizenofearth/javascript-patterns",
+       "desc":"overview of ecmascript 6"
+   },
+   {
+       "name":"todomvc",
+       "url":"https://github.com/citizenofearth/javascript-patterns",
+       "desc":"basic todo app written in popular mv* frameworks"
    }
 ]
