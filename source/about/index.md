@@ -3,13 +3,17 @@ title: about
 date: 2017-04-09 17:16:10
 ---
 
+i'm a web developer
+
 <!-- PROFILE PIC -->
 here is an old picture of me
 
 ![alt text](../images/me.png "here is an old picture of me")
+<!-- /PROFILE PIC -->
 
 <!-- CV -->
 [**→ curriculum vitae** (/kəˈrɪkjᵿləm ˈviːtaɪ/, /ˈwiːtaɪ/, or /ˈvaɪtiː/)](//cv.tenzin.ca)
+<!-- /CV -->
 
 <!-- GOOGLE MAPS -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm8XpxrP2QYGkoUl7YFyBk8uIqjzWFGTc&extension=.js"></script>
@@ -184,6 +188,13 @@ here is an old picture of me
     height:300px;
     width:600px;
   }
+  .gmnoprint {
+    display:none;
+  }
+  .gm-style-cc {
+    display:none;
+  }
 </style>
 
 <div id='mapkit-5897'></div>
+<!-- /GOOGLE MAPS -->
