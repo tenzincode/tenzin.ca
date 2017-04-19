@@ -338,14 +338,14 @@
   letter-spacing: normal;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: #eee;
+  color: #999;
   display: block;
 }
 .content h3 {
   font-size: 0.9rem;
   font-weight: bold;
   text-decoration: underline;
-  color: #eee;
+  color: #999;
 }
 .content h4,
 .content h5,
@@ -421,7 +421,7 @@
 .content th {
   font-size: 13px;
   font-weight: bold;
-  color: #eee;
+  color: #999;
   border-bottom: 1px dashed #ccc;
   padding: 8px 8px;
 }
@@ -1290,7 +1290,7 @@ pre code {
 }
 .highlight {
   font-family: "Menlo", "Meslo LG", monospace;
-  background: #fff;
+  background: #000;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   padding: 10px 15px;
