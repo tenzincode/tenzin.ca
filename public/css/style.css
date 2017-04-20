@@ -338,22 +338,22 @@
   letter-spacing: normal;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: #999;
+  color: #6b847b;
   display: block;
 }
 .content h3 {
   font-size: 0.9rem;
   font-weight: bold;
   text-decoration: underline;
-  color: #999;
+  color: #6b847b;
 }
 .content h4,
 .content h5,
 .content h6 {
   font-size: 0.9rem;
   font-weight: normal;
-  color: #ccc;
-  border-bottom: 1px dashed #ccc;
+  color: #6b847b;
+  border-bottom: 1px dashed #6b847b;
   display: inline;
   text-decoration: none;
 }
@@ -365,7 +365,7 @@
   margin-bottom: 0.5rem;
 }
 .content hr {
-  border: 1px dashed #ccc;
+  border: 1px dashed #6b847b;
 }
 .content strong {
   font-weight: bold;
@@ -421,7 +421,7 @@
 .content th {
   font-size: 13px;
   font-weight: bold;
-  color: #999;
+  color: #6b847b;
   border-bottom: 1px dashed #ccc;
   padding: 8px 8px;
 }
@@ -1029,7 +1029,7 @@ article header .meta {
   margin-bottom: 1rem;
 }
 article header .meta * {
-  color: #ccc;
+  color: #6b847b;
   font-size: 0.85rem;
 }
 article header .author {
@@ -1290,7 +1290,7 @@ pre code {
 }
 .highlight {
   font-family: "Menlo", "Meslo LG", monospace;
-  background: #000;
+  background: #484848;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   padding: 10px 15px;
