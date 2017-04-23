@@ -2,7 +2,12 @@
    {
       "name":"tenzin.ca",
       "url":"http://tenzin.ca/",
-      "desc":"a page built on vue.js"
+      "desc":"my homepage"
+   },
+   {
+      "name":"photography",
+      "url":"/photography/",
+      "desc":"my photography"
    },
    {
        "name":"javascript patterns",

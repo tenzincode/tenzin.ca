@@ -3,17 +3,24 @@ title: about
 date: 2017-04-09 17:16:10
 ---
 
-i'm a web developer
-
-<!-- PROFILE PIC -->
-here is an old picture of me
-
-![alt text](../images/me.png "here is an old picture of me")
-<!-- /PROFILE PIC -->
+i'm a web developer born and raised in winnipeg, manitoba, currently living in montreal, quebec.  i completed my bachelors of science in mathematics at mcgill university in 2006 and studied web development after that at concordia university.
 
 <!-- CV -->
 [**→ curriculum vitae** (/kəˈrɪkjᵿləm ˈviːtaɪ/, /ˈwiːtaɪ/, or /ˈvaɪtiː/)](//cv.tenzin.ca)
 <!-- /CV -->
+
+<!-- CONTACT INFO -->
+## contact information
+
+phone : +1.514.815.8883
+email : <a href="mailto:tenzin@tenzin.ca">tenzin[at]tenzin[dot]ca</a>
+
+<!-- /CONTACT INFO -->
+
+<!-- PROFILE PIC -->
+here is an old picture of me
+![alt text](../images/me.png "here is an old picture of me")
+<!-- /PROFILE PIC -->
 
 <!-- GOOGLE MAPS -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm8XpxrP2QYGkoUl7YFyBk8uIqjzWFGTc&extension=.js"></script>
