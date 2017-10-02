@@ -4,7 +4,7 @@ date: 2017-04-19 10:12:04
 tags:
 ---
 
-#### yet another web developer's blog
+### yet another web developer's blog
 
 current flavour built on [hexo](https://hexo.io/) and [node](https://nodejs.org/en/), for now.
 
