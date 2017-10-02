@@ -3,7 +3,7 @@ title: about
 date: 2017-04-09 17:16:10
 ---
 
-i'm a web developer born and raised in winnipeg, manitoba, currently living in montreal, quebec.  i completed my bachelors of science in mathematics at mcgill university in 2006 and studied web development after that at concordia university.
+i'm a web developer born and raised in winnipeg, manitoba, currently living in montreal, quebec.  i completed my bachelors of science in mathematics at mcgill university in 2006 and studied web development after that at concordia university.  i love photography, coding, gaming, and camping.
 
 <!-- CV -->
 [**→ curriculum vitae** (/kəˈrɪkjᵿləm ˈviːtaɪ/, /ˈwiːtaɪ/, or /ˈvaɪtiː/)](//cv.tenzin.ca)
@@ -12,7 +12,7 @@ i'm a web developer born and raised in winnipeg, manitoba, currently living in m
 <!-- CONTACT INFO -->
 ## contact information
 
-phone : +1.514.815.8883
+phone : +1.514.<a href="mailto:tenzin@tenzin.ca">mail.me</a>
 email : <a href="mailto:tenzin@tenzin.ca">tenzin[at]tenzin[dot]ca</a>
 
 <!-- /CONTACT INFO -->
