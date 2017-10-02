@@ -68,6 +68,12 @@ theme: cactus-dark
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/citizenofearth/citizenofearth.github.io.git
-  branch: master
+  type: ftpsync
+  host: ftp.tenzin.ca
+  user: tenzojkw
+  pass: 	LyA6CN6$FP!D9
+  remote:
+  port: 21
+  ignore:
+  connections:
+  verbose: true
