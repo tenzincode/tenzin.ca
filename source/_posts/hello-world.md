@@ -2,11 +2,10 @@
 title: hello world
 date: 2017-04-19 10:12:04
 tags:
+- hello
 ---
 
-### yet another web developer's blog
-
-current flavour built on [hexo](https://hexo.io/) and [node](https://nodejs.org/en/), for now.
+Yet another web developer's blog!  No matter what, do not paste the block of code below into your console!
 
 ``` javascript
 var ________________ = [] + [];

@@ -414,12 +414,12 @@
 }
 .content table {
   width: 100%;
-  font-size: 12px;
+  font-size: 10px;
   border-collapse: collapse;
   text-align: left;
 }
 .content th {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: bold;
   color: #6b847b;
   border-bottom: 1px dashed #ccc;
@@ -427,7 +427,6 @@
 }
 .content td {
   border-bottom: none;
-  padding: 9px 8px 0px 8px;
 }
 *,
 *:before,
@@ -443,7 +442,7 @@ html {
 body {
   color: #000;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Menlo", "Meslo LG", monospace;
   font-weight: 400;
   line-height: 1.725;
@@ -996,7 +995,7 @@ body {
 }
 .post-list .post-item .meta {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   color: #666;
   min-width: 100px;
   margin-right: 16px;
@@ -1268,12 +1267,10 @@ article .content .caption {
 }
 pre {
   font-family: "Menlo", "Meslo LG", monospace;
-  font-size: 13px;
+  font-size: 11px;
   padding: 10px 15px;
   padding-bottom: 0;
   line-height: 22px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: 1px dotted #666;
   overflow-x: auto;
 }
@@ -1291,8 +1288,6 @@ pre code {
 .highlight {
   font-family: "Menlo", "Meslo LG", monospace;
   background: #484848;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   padding: 10px 15px;
   overflow-x: auto;
   margin: 1rem 0 1rem 0;

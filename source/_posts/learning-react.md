@@ -1,7 +1,9 @@
 ---
 title: learning react
 date: 2017-10-01 16:34:52
-tags: react
+tags: 
+- react
+- javascript
 ---
 
 ### [React](https://reactjs.org/)
@@ -15,3 +17,7 @@ React heavily encourages the creation of reusable UI components, which present d
 - JSX
 - Components
 - Unidirectional data flow and Flux
+
+### React Resources
+
+- https://reactcheatsheet.com/

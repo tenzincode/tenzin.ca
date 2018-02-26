@@ -1,17 +1,25 @@
 ---
 title: progressive web apps
 date: 2017-10-01 22:08:01
-tags: pwa
+tags: 
+- pwa
+- javascript
 ---
 
-### progressive web apps
+PWAs are experiences that combine the best of the web with the best of native applications.  Users see benefits from even the first visit in a browser tab.  They load quickly, even with a poor network connection, sends relevant push notifications, has an icon on the home screen, and loads as a top-level, full screen experience.
 
-are user experiences that have the reach of the web and are:
+- *Progressive*: Works for every user, regardless of browser choice because it's built with progressive enhancement as a core tenet.
+- *Responsive*: Fits any form factor: desktop, mobile, tablet, or whatever is next.
+- *Connectivity independent* - Enhanced with service workers to work offline or on low-quality networks.
+- *App-like*: Feels like an app, because the app shell model separates the application functionality from application content.
+- *Fresh*: Always up-to-date thanks to the service worker update process.
+- *Safe*: Served via HTTPS to prevent snooping and to ensure content hasn't been tampered with.
+- *Discoverable*: Is identifiable as an "application" thanks to W3C manifest and service worker registration scope, allowing search engines to find it.
+- *Re-engageable*: Makes re-engagement easy through features like push notifications.
+- *Installable*: Allows users to add apps they find most useful to their home screen without the hassle of an app store.
+- *Linkable*: Easily share the application via URL, does not require complex installation.
 
-- Reliable : load instantly and never show downtime, even in uncertain network conditions.
-- Fast : respond quickly to user interactions with smooth transitions and scrolling.
-- Engaging : feels like a native app on the device with an immersive user experience.
 
-This new level of quality allows progressive web apps, or PWAs, to earn a place on the user's home screen.
-
-check out some [examples](https://pwa.rocks/)
+### Resources
+- Example projects at [pwa.rocks](https://pwa.rocks/)
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) analyzes web apps/pages
