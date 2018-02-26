@@ -2,30 +2,35 @@
 	{
 		"name":"tenzin.ca",
 		"url":"http://tenzin.ca/",
-		"desc":"my homepage"
+		"desc":"home"
+	},
+	{
+		"name":"curriculum vitae",
+		"url":"#",
+		"desc":"hire me"
 	},
 	{
 		"name":"photography",
 		"url":"/photography/",
-		"desc":"my photography"
-	},
-	{
-		"name":"curriculum vitae",
-		"url":"https://github.com/citizenofearth/cv",
-		"desc":"cv, resume, hire me"
-	},
-	{
-		"name":"eve online blog",
-		"url":"https://github.com/citizenofearth/eve",
-		"desc":"eve online blog built on hexo"
+		"desc":"a small portfolio"
 	},
 	{
 		"name":"javascript patterns",
 		"url":"https://github.com/citizenofearth/javascript-patterns",
-		"desc":"common patterns in javascript"
+		"desc":"common recipes for javascript"
 	},
 	{
-		"name":"ecmascript 6 features",
+		"name":"eve online blog",
+		"url":"https://github.com/citizenofearth/eve",
+		"desc":"musings on the scifi space simulator"
+	},
+	{
+		"name":"todomvc",
+		"url":"https://github.com/citizenofearth/todomvc",
+		"desc":"basic todo app written in several front-end frameworks"
+	},
+	{
+		"name":"es6 features",
 		"url":"https://github.com/citizenofearth/es6features",
 		"desc":"overview of ecmascript 6"
 	},
@@ -33,11 +38,6 @@
 		"name":"d3",
 		"url":"https://github.com/citizenofearth/d3",
 		"desc":"data driven documents"
-	},
-	{
-		"name":"todomvc",
-		"url":"https://github.com/citizenofearth/todomvc",
-		"desc":"basic todo app written in popular mv* frameworks"
 	},
 	{
 		"name":"vue",
