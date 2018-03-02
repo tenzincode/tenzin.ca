@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.6.0"
+    "version": "3.5.0"
   },
   "dependencies": {
+    "ejs": "^2.5.7",
     "hexo": "^3.3.9",
     "hexo-deployer-ftpsync": "^0.1.1",
     "hexo-deployer-git": "^0.2.0",
