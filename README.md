@@ -4,11 +4,7 @@ This is the website of web developer Tenzin Namgyal
 
 ## Topics:
 
-- JavaScript
-- React
-- Vue
-- Progressive Web Apps
-- DevOps
+- Web Development
 - Gaming
 - Music
 - Camping
