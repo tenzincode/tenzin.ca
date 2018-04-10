@@ -1,7 +1,7 @@
 ---
 title: learning react
 date: 2017-10-01 16:34:52
-tags: 
+tags:
 - react
 - javascript
 ---
@@ -23,3 +23,4 @@ React heavily encourages the creation of reusable UI components, which present d
 - [React Cheat Sheet](https://reactcheatsheet.com/)
 - [React & Typescript](https://levelup.gitconnected.com/typescript-and-react-using-create-react-app-a-step-by-step-guide-to-setting-up-your-first-app-6deda70843a4)
 - [React & D3](https://www.smashingmagazine.com/2018/02/react-d3-ecosystem/)
+- [Tyler McGinnis Tutorials](https://learn.tylermcginnis.com)
