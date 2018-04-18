@@ -190,17 +190,26 @@ email : <a href="mailto:tenzin@tenzin.ca">tenzin[at]tenzin[dot]ca</a>
 </script>
 
 <style>
-  #mapkit-5897 {
-    height:300px;
-    width:600px;
-  }
   .gmnoprint {
     display:none;
   }
   .gm-style-cc {
     display:none;
   }
+  .map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
 </style>
 
-<div id='mapkit-5897'></div>
+<div id='mapkit-5897' class="map-responsive"></div>
 <!-- /GOOGLE MAPS -->
