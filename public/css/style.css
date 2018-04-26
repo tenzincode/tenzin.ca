@@ -397,7 +397,7 @@
 .content ul,
 .content ol,
 .content dl {
-  line-height: 1.725;
+  line-height: 2;
 }
 .content ul ul,
 .content ol ul,
@@ -414,12 +414,12 @@
 }
 .content table {
   width: 100%;
-  font-size: 14px;
+  font-size: 10px;
   border-collapse: collapse;
   text-align: left;
 }
 .content th {
-  font-size: 15px;
+  font-size: 11px;
   font-weight: bold;
   color: #6b847b;
   border-bottom: 1px dashed #ccc;
@@ -442,10 +442,10 @@ html {
 body {
   color: #000;
   background-color: #fff;
-  font-size: 16px;
-  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  font-family: "Meslo LG", "Menlo", serif;
   font-weight: 400;
-  line-height: 1.725;
+  line-height: 2;
   text-rendering: geometricPrecision;
   min-height: 100%;
   display: flex;
@@ -1278,7 +1278,7 @@ article .content .caption {
   font-style: italic;
 }
 pre {
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "Meslo LG", "Menlo", monospace;
   font-size: 11px;
   padding: 10px 15px;
   padding-bottom: 0;
@@ -1298,7 +1298,7 @@ pre code {
   padding: 0;
 }
 .highlight {
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "Meslo LG", "Menlo", monospace;
   background: #484848;
   padding: 10px 15px;
   overflow-x: auto;
