@@ -17,7 +17,7 @@ email : <a href="mailto:tenzin@tenzin.ca">tenzin[at]tenzin[dot]ca</a>
 <!-- /CONTACT INFO -->
 
 <!-- PROFILE PIC -->
-<br>*here is an old picture of me*
+<br>*here is an old photo of me*
 ![alt text](../images/me.png "here is an old picture of me")
 <!-- /PROFILE PIC -->
 
