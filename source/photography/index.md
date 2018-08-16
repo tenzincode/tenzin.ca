@@ -3,7 +3,7 @@ title: photography
 date: 2017-04-10 5:53:24
 ---
 
-#### photos taken by me on canon 40d or 1966 minolta hi-matic 7s
+#### photos taken by me on canon 40d or minolta hi-matic 7s
 
 ![alt text](../images/photography/01.jpg "camping on wolfe island in kingston, ontario")
 
@@ -97,10 +97,6 @@ date: 2017-04-10 5:53:24
 
 ![alt text](../images/photography/47.jpg "montreal : sculpture in parc jean drapeau 3")
 
-![alt text](../images/photography/48.jpg "mother nature's lungs")
-
-![alt text](../images/photography/49.jpg "munaf")
+![alt text](../images/photography/48.jpg "mother nature's bronchioles")
 
 ![alt text](../images/photography/50.jpg "montreal : silo 5 in old montreal")
-
-![alt text](../images/photography/51.jpg "montreal : silo 5 in old montreal 2")

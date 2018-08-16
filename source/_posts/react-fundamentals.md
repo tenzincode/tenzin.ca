@@ -6,6 +6,8 @@ tags:
 - javascript
 ---
 
+*Notes from the course by [Tyler McGinnis](https://tylermcginnis.com)*
+
 ## Intro to the React Ecosystem
 
 Top qualities of React:
