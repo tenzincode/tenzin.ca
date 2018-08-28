@@ -3,7 +3,7 @@ title: about
 date: 2017-04-09 17:16:10
 ---
 
-i'm a web developer born and raised in winnipeg, manitoba and currently living in montreal, quebec where i did my bachelors of science in mathematics at mcgill university and diploma in web development at concordia university.  i love coding, camping, canoes, cameras, and cycling.
+i'm a web developer born and raised in winnipeg, manitoba and currently living in montreal, quebec where i did my bachelors of science in mathematics at mcgill university and diploma in web development at concordia university.  i love coding, calculus, camping, canoes, cameras, and cycling.
 
 <!-- CV -->
 [**→ curriculum vitae** (/kəˈrɪkjᵿləm ˈviːtaɪ/, /ˈwiːtaɪ/, or /ˈvaɪtiː/)](#)
