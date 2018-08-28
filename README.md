@@ -1,13 +1,3 @@
-# Tenzin.ca
+# Tenzin.ca v4
 
-This is the website of web developer Tenzin Namgyal
-
-## Topics:
-
-- Web Development
-- Gaming
-- Music
-- Camping
-- Science & Nature
-- Healthy Living
-- #yolo #hashtag
+current iteration of my website
