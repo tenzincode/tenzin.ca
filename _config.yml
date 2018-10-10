@@ -42,6 +42,10 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
+archive_generator:
+  per_page: 200
+  yearly: true
+  monthly: true
 
 # Category & Tag
 default_category: uncategorized
@@ -67,13 +71,3 @@ theme: cactus-dark
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: ftpsync
-  host: ftp.tenzin.ca
-  user: tenzojkw
-  pass: 	LyA6CN6$FP!D9
-  remote:
-  port: 21
-  ignore:
-  connections:
-  verbose: true
