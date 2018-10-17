@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="div.bar {     display: inline-block;     width: 7px;     height: 75px;   /* We&apos;ll override this later */     background-color: #7404a4;     margin-right: 1px; }   D3 (or Data-Driven Documents) is a J">
+<meta name="keywords" content="d3,javascript,data">
+<meta property="og:type" content="article">
+<meta property="og:title" content="D3.js">
+<meta property="og:url" content="http://blog.tenzin.com/2017/04/23/d3/index.html">
+<meta property="og:site_name" content="tenzin namgyal">
+<meta property="og:description" content="div.bar {     display: inline-block;     width: 7px;     height: 75px;   /* We&apos;ll override this later */     background-color: #7404a4;     margin-right: 1px; }   D3 (or Data-Driven Documents) is a J">
+<meta property="og:locale" content="english">
+<meta property="og:updated_time" content="2018-04-10T15:24:28.948Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="D3.js">
+<meta name="twitter:description" content="div.bar {     display: inline-block;     width: 7px;     height: 75px;   /* We&apos;ll override this later */     background-color: #7404a4;     margin-right: 1px; }   D3 (or Data-Driven Documents) is a J">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>D3.js</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/photography/">Photography</a></li>
+         
+          <li><a href="http://github.com/citizenofearth">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/10/01/learning-react/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2017/04/19/hello-world/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://blog.tenzin.com/2017/04/23/d3/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://blog.tenzin.com/2017/04/23/d3/&text=D3.js"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://blog.tenzin.com/2017/04/23/d3/&is_video=false&description=D3.js"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=D3.js&body=Check out this article: http://blog.tenzin.com/2017/04/23/d3/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://blog.tenzin.com/2017/04/23/d3/&name=D3.js&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Resources"><span class="toc-number">1.</span> <span class="toc-text">Resources</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        D3.js
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">tenzin namgyal</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-04-24T00:12:25.000Z" itemprop="datePublished">2017-04-23</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/d3/">d3</a>, <a class="tag-link" href="/tags/data/">data</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <style>
+div.bar {
+    display: inline-block;
+    width: 7px;
+    height: 75px;   /* We'll override this later */
+    background-color: #7404a4;
+    margin-right: 1px;
+}
+</style>
+
+<p><a href="https://d3js.org" target="_blank" rel="noopener">D3</a> (or Data-Driven Documents) is a JavaScript library for manipulating documents based on data.  D3 helps you bring data to life using HTML, SVG, and CSS.  D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation.</p>
+<p>To use D3, copy this snippet:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://d3js.org/d3.v4.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>D3 allows you to bind artibrary data to the DOM, and then apply data-driven transformations to the document.  For example, you can use D3 to generate an HTML table from an array of numbers.  Or, use the same data to create an interactive SVG bar chart with smooth transitions and interaction.</p>
+<p>D3 is not a monolithic framework that seeks to provide every conceivable feature.  Instead, it solves the crux of the problem: efficient manipulation of documents based on data.  This avoids proprietary representation and affords extraordinary flexibility, exposing the full capabilities of web standards such as HTML, SVG, and CSS.  With minimal overhead, D3 is extremely fast, supporting large datasets and dynamic behaviors for interaction and animation.  D3’s functional style allows code reuse through a diverse collection of <a href="https://github.com/d3/d3/blob/master/API.md" target="_blank" rel="noopener">official</a> and <a href="https://www.npmjs.com/browse/keyword/d3-module" target="_blank" rel="noopener">community-developed</a> modules.</p>
+<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><ul>
+<li><a href="https://github.com/d3/d3/wiki/Gallery" target="_blank" rel="noopener">Examples</a></li>
+<li><a href="https://github.com/d3/d3/wiki/Tutorials" target="_blank" rel="noopener">Tutorials</a></li>
+<li><a href="https://github.com/d3/d3/wiki" target="_blank" rel="noopener">Wiki</a></li>
+</ul>
+<hr>
+<svg width="592" height="500"><br/>    <rect x="0" y="0" width="500" height="50"/><br/></svg>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script type="text/javascript">
+    var dataset = [];
+    for (var i = 0; i < 76; i++) {
+        var newNumber = Math.round(Math.random() * 30);
+        dataset.push(newNumber);
+    }
+
+    d3.select(".content")
+        .selectAll("div")
+        .data(dataset)  // <-- The answer is here!
+        .enter()
+        .append("div")
+        .attr("class", "bar")
+        .style("height", function(d) {
+            var barHeight = d * 5;
+            return barHeight + "px";
+        });
+</script>
+
+<hr>
+<p><button class="button" onclick="transition()">Update</button></p>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var n = 20, // number of layers
+    m = 200, // number of samples per layer
+    k = 10; // number of bumps per layer
+
+var stack = d3.stack().keys(d3.range(n)).offset(d3.stackOffsetWiggle),
+    layers0 = stack(d3.transpose(d3.range(n).map(function() { return bumps(m, k); }))),
+    layers1 = stack(d3.transpose(d3.range(n).map(function() { return bumps(m, k); }))),
+    layers = layers0.concat(layers1);
+
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+var x = d3.scaleLinear()
+    .domain([0, m - 1])
+    .range([0, width]);
+
+var y = d3.scaleLinear()
+    .domain([d3.min(layers, stackMin), d3.max(layers, stackMax)])
+    .range([height, 0]);
+
+var z = d3.interpolateCool;
+
+var area = d3.area()
+    .x(function(d, i) { return x(i); })
+    .y0(function(d) { return y(d[0]); })
+    .y1(function(d) { return y(d[1]); });
+
+svg.selectAll("path")
+  .data(layers0)
+  .enter().append("path")
+    .attr("d", area)
+    .attr("fill", function() { return z(Math.random()); });
+
+function stackMax(layer) {
+  return d3.max(layer, function(d) { return d[1]; });
+}
+
+function stackMin(layer) {
+  return d3.min(layer, function(d) { return d[0]; });
+}
+
+function transition() {
+  var t;
+  d3.selectAll("path")
+    .data((t = layers1, layers1 = layers0, layers0 = t))
+    .transition()
+      .duration(2500)
+      .attr("d", area);
+}
+
+// Inspired by Lee Byron’s test data generator.
+function bumps(n, m) {
+  var a = [], i;
+  for (i = 0; i < n; ++i) a[i] = 0;
+  for (i = 0; i < m; ++i) bump(a, n);
+  return a;
+}
+
+function bump(a, n) {
+  var x = 1 / (0.1 + Math.random()),
+      y = 2 * Math.random() - 0.5,
+      z = 10 / (0.1 + Math.random());
+  for (var i = 0; i < n; i++) {
+    var w = (i / n - y) * z;
+    a[i] += x * Math.exp(-w * w);
+  }
+}
+
+</script>
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/photography/">Photography</a></li>
+         
+          <li><a href="http://github.com/citizenofearth">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Resources"><span class="toc-number">1.</span> <span class="toc-text">Resources</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://blog.tenzin.com/2017/04/23/d3/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://blog.tenzin.com/2017/04/23/d3/&text=D3.js"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://blog.tenzin.com/2017/04/23/d3/&is_video=false&description=D3.js"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=D3.js&body=Check out this article: http://blog.tenzin.com/2017/04/23/d3/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://blog.tenzin.com/2017/04/23/d3/&title=D3.js"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://blog.tenzin.com/2017/04/23/d3/&name=D3.js&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 tenzin
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/photography/">Photography</a></li>
+         
+          <li><a href="http://github.com/citizenofearth">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville">
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
