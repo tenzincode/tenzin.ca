@@ -1,3 +1,3 @@
-# Tenzin.ca v4
+# tenzin v4
 
-current iteration of my website
+one of many
