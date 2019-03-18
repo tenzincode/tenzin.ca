@@ -719,9 +719,6 @@ body {
 #header-post .active {
   color: #2bbc8a;
 }
-#header-post #menu {
-  visibility: hidden;
-}
 #header-post #nav {
   letter-spacing: 0.01em;
   font-size: 0.8rem;
