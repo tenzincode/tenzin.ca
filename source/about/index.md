@@ -3,22 +3,28 @@ title: about
 date: 2017-04-09 17:16:10
 ---
 
-i'm a web developer born and raised in winnipeg, manitoba and currently living in montreal, quebec where i did my bachelors of science in mathematics at mcgill university and diploma in web development at concordia university.  i love coding, calculus, camping, canoes, cameras, and cycling.
+i'm a web developer born and raised in winnipeg, manitoba and currently living in montreal, quebec where i did my bachelors of science in mathematics at mcgill university and diploma in web development at concordia university. i love coding, calculus, camping, canoes, cameras, and cycling.
 
 <!-- CV -->
+
 [**→ curriculum vitae** (/kəˈrɪkjᵿləm ˈviːtaɪ/, /ˈwiːtaɪ/, or /ˈvaɪtiː/)](#)
+
 <!-- /CV -->
 
 <!-- CONTACT INFO -->
+
 ## contact information
 
 phone : +1.514.<a href="mailto:tenzin@tenzin.ca">mail.me</a>
 email : <a href="mailto:tenzin@tenzin.ca">tenzin[at]tenzin[dot]ca</a>
+
 <!-- /CONTACT INFO -->
 
 <!-- PROFILE PIC -->
-<br>*here is an old photo of me*
+
+<br>_here is an old photo of me_
 ![alt text](../images/me.png "here is an old picture of me")
+
 <!-- /PROFILE PIC -->
 
 <!-- GOOGLE MAPS -->
@@ -211,6 +217,7 @@ email : <a href="mailto:tenzin@tenzin.ca">tenzin[at]tenzin[dot]ca</a>
   }
 </style>
 
-<span>this is where i am</span>
+_here is where you can find me_
+
 <div id='mapkit-5897' class="map-responsive"></div>
 <!-- /GOOGLE MAPS -->
