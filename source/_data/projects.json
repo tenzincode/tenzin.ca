@@ -12,17 +12,17 @@
 	{
 		"name":"photography",
 		"url":"/photography/",
-		"desc":"a small portfolio"
+		"desc":"a brief portfolio"
+	},
+	{
+		"name":"eve online",
+		"url":"https://github.com/citizenofearth/eve",
+		"desc":"musings on the scifi space simulator"
 	},
 	{
 		"name":"javascript patterns",
 		"url":"https://github.com/citizenofearth/javascript-patterns",
 		"desc":"common recipes for javascript"
-	},
-	{
-		"name":"eve online blog",
-		"url":"https://github.com/citizenofearth/eve",
-		"desc":"musings on the scifi space simulator"
 	},
 	{
 		"name":"todomvc",
@@ -39,14 +39,4 @@
 		"url":"https://github.com/citizenofearth/d3",
 		"desc":"data driven documents"
 	},
-	{
-		"name":"vue",
-		"url":"https://github.com/citizenofearth/vue",
-		"desc":"test project built on vuejs"
-	},
-	{
-		"name":"react001",
-		"url":"https://github.com/citizenofearth/react001",
-		"desc":"test project built on reactjs"
-	}
 ]
