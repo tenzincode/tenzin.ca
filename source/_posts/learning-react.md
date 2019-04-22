@@ -12,13 +12,13 @@ tags:
 
 React heavily encourages the creation of reusable UI components, which present data that changes over time. React abstracts away the DOM from you, offering a simpler programming model and better performance. React can also render on the server using Node, and it can even power native apps using React Native. React implements one-way reactive data flow, which reduces boilerplate and is easier to wrap your head around compared to traditional data binding.
 
-### React Features
+## React Features
 
 - JSX
 - Components
 - Unidirectional data flow and Flux
 
-### React Resources
+## React Resources
 
 - [Official Tutorial](https://reactjs.org/tutorial/tutorial.html)
 - [Build With React](http://buildwithreact.com/#articles)

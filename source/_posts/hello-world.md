@@ -7,7 +7,7 @@ tags:
 
 Yet another web developer's blog!  No matter what, do not paste the block of code below into your console!
 
-``` javascript
+```javascript
 var ________________ = [] + [];
 
 var _ = +[];

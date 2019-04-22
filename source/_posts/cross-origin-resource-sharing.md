@@ -12,7 +12,7 @@ Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP he
 
 XMLHttpRequest or Fetch invocations, web fonts, WebGL textures, and images/video frames drawn to a canvas using `drawImage()` use this cross-origin sharing standard to enable cross-site HTTP requests.
 
-![Cross-Origin Resource Sharing](https://mdn.mozillademos.org/files/14295/CORS_principle.png)
+![Cross-Origin Resource Sharing](/images/cors.png)
 
 ## Access Control Scenarios
 
