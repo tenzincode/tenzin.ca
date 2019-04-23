@@ -7,7 +7,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Notes from the course by Tyler McGinnis  Intro to the React EcosystemTop qualities of React:  Composition everything in the React DOM is a component components are analogous to a container that wraps">
-<meta name="keywords" content="react,javascript">
+<meta name="keywords" content="javascript,react">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react fundamentals">
 <meta property="og:url" content="http://blog.tenzin.com/2018/04/10/react-fundamentals/index.html">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://i.imgur.com/3LkFtGd.png">
 <meta property="og:image" content="http://blog.tenzin.com/images/reactrouter.png">
 <meta property="og:image" content="http://i.imgur.com/hQe7cs5.png">
-<meta property="og:updated_time" content="2019-04-22T20:21:33.213Z">
+<meta property="og:updated_time" content="2019-04-12T01:46:34.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react fundamentals">
 <meta name="twitter:description" content="Notes from the course by Tyler McGinnis  Intro to the React EcosystemTop qualities of React:  Composition everything in the React DOM is a component components are analogous to a container that wraps">
@@ -438,15 +438,15 @@
 
     <div id="nav-footer" style="display: none">
       <ul>
-         
+        
           <li><a href="/">Home</a></li>
-         
+        
           <li><a href="/about/">About</a></li>
-         
+        
           <li><a href="/archives/">Writing</a></li>
-         
+        
           <li><a href="/photography/">Photography</a></li>
-         
+        
           <li><a href="http://github.com/citizenofearth">Projects</a></li>
         
       </ul>
@@ -474,10 +474,10 @@
 
     <div id="actions-footer">
       <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
-        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').slideToggle();$('#share-footer').slideUp();$('#nav-footer').slideUp();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> Contents</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#toc-footer').slideUp();$('#share-footer').slideToggle();$('#nav-footer').slideUp();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
         <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#toc-footer').slideUp();$('#share-footer').slideUp();$('#nav-footer').slideToggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
       </ul>
     </div>
 

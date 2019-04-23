@@ -20,26 +20,24 @@
       color: $color-link
 
   #nav-footer
-    margin-left: 1rem
-    margin-right: 1rem
+    margin-left: 0.5rem
+    margin-right: 0.5rem
     text-align: center
     a
       color: $color-accent
-      font-size: 1rem
+      font-size: 0.7rem
     a:hover
       underline(5px, $color-accent)
     ul
       list-style-type: none
       margin: 0
       padding: 0
-      display: table
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
       width: 100%
       li
-        display: inline-table
-        width: 20%
-        padding: 10px
-        vertical-align: middle
-  
+        padding: 10px 0
+
   #actions-footer
     text-align: center
     margin-top: 1rem
@@ -51,12 +49,13 @@
         list-style-type: none
         margin: 0
         padding: 0
-        display: table
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
         width: 100%
         li
           display: table-cell
           vertical-align: middle
-  
+
 
   #share-footer
     margin-left: 1rem
@@ -66,14 +65,16 @@
       list-style-type: none
       margin: 0
       padding: 0
-      display: table
+      display: inline-grid
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+      justify-items: center
       width: 100%
       li
-        display: inline-table
+        display: grid
+        align-items: center
         width: 20%
         padding: 10px
-        vertical-align: middle
-  
+
 
   #toc-footer
     clear: both
@@ -89,15 +90,15 @@
     .toc-level-1
       display: none
     .toc-level-2
-      font-size: 0.8rem
+      font-size: 0.7rem
       color: $color-text
       &:before
         content: "#"
         color: $color-accent
     .toc-level-3
-      font-size: 0.7rem
+      font-size: 0.6rem
       color: #b3b3b3
-      color: #666 
+      color: #666
       line-height: 15px
     .toc-level-4
       display: none
