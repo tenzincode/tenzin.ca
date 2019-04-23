@@ -10,8 +10,10 @@ tags:
 
 ## Paradigms
 
+All programming languages can be classified, based on their features, into some programming paradigm.  Some of these paradigms are concerned with implications for the execution model of the language or whether the sequence of operations is defined by the execution model.  Others with the way that code is organized, such as grouping code into units along with the state that is modified by the code.  And yet others are concerned with the style of syntax and grammar.
+
 ### Imperative
-Focuses on how to execute, defines control flow as statements that change a program state.  Main traits include direct assignments, common data structures, and global variables.  Example: C, C++, Java, PHP, Python, Ruby.
+Imperative programming focuses on HOW to execute program logic and defines control flow as statements that change a program state.  Main traits include direct assignments, common data structures, and global variables.  Example: C, C++, Java, PHP, Python, Ruby.
 
 ```java
 int total = 0;
@@ -24,7 +26,7 @@ total = number1 + number2 + number3;
 Each statement changes the state of the program, from assigning values to each variable to the final addition of those values. Using a sequence of five statements the program is explicitly told how to add the numbers 5, 10 and 15 together.
 
 ### Declarative
-Focuses on what to execute, defines program logic, but not detailed control flow.  Main traits include fourth-generation languages, spreadsheets, and report program generators.  Example: SQL, regular expressions, Prolog.
+Declarative programming focuses on WHAT to execute and defines program logic, but not a detailed control flow.  Main traits include fourth-generation languages, spreadsheets, and report program generators.  Example: SQL, regular expressions, Prolog.
 
 Declarative programs can be described as context independent. meaning they only declare what the ultimate goal is, not the intermediary steps to reach that goal.
 
@@ -48,7 +50,7 @@ WHERE AVG(drug_dosage) &gt; 1000
 ```
 
 ### Procedural
-Specifies the steps a program must take to reach a desired state, usually read in order from top to bottom.  Main traits include local variables, sequence, selection, iteration, and modularization.  Example: C, C++, PHP, Python.
+Procedural programming specifies the steps a program must take to reach a desired state, usually read in order from top to bottom.  Main traits include local variables, sequence, selection, iteration, and modularization.  Example: C, C++, PHP, Python.
 
 ```pascal
 program Fibonacci;
@@ -79,7 +81,7 @@ end.
 ```
 
 ### Functional
-Treats programs as evaluating mathematical functions and avoids state and mutable data.  Main traits include lambda calculus, compositionality, formula, recursion, referential transparency, no side effects.  Example: C++, Clojure, Elixir, Erlang, F#, Haskell, Kotlin, Lisp, Python, Ruby, Scala, Elm, Standard ML, JavaScript.
+Functional programming treats programs as evaluating mathematical functions and avoids state and mutable data.  Main traits include lambda calculus, compositionality, formula, recursion, referential transparency, no side effects.  Example: C++, Clojure, Elixir, Erlang, F#, Haskell, Kotlin, Lisp, Python, Ruby, Scala, Elm, Standard ML, JavaScript.
 
 ```javascript
 // Non Pure Function
@@ -95,7 +97,7 @@ function add2 (x){
 ```
 
 ### Object-Oriented
-Organizes programs as objects, which are data structures consisting of datafields and methods together with their interactions.  Main traits include objects, methods, message passing, information hiding, data abstraction, encapsulation, polymorphism, inheritance, serialization-marshalling.  Example: C++, C#, Java, PHP, Python, Ruby, Scala, JavaScript.
+Object-oriented programming (OOP) organizes programs as objects, which are data structures consisting of datafields and methods together with their interactions.  Main traits include objects, methods, message passing, information hiding, data abstraction, encapsulation, polymorphism, inheritance, serialization-marshalling.  Example: C++, C#, Java, PHP, Python, Ruby, Scala, JavaScript.
 
 ```javascript
 function Person(firstName, lastName) {
