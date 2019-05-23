@@ -15,7 +15,7 @@
 <meta property="og:description" content="Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell a browser to let a web application running at one origin (domain) have permission to access resources from">
 <meta property="og:locale" content="english">
 <meta property="og:image" content="http://blog.tenzin.com/images/cors.png">
-<meta property="og:updated_time" content="2019-05-15T20:30:11.900Z">
+<meta property="og:updated_time" content="2019-04-22T20:23:03.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cross-origin resource sharing">
 <meta name="twitter:description" content="Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell a browser to let a web application running at one origin (domain) have permission to access resources from">
@@ -111,7 +111,7 @@
     
     <div class="content index width mx-auto px2 my4">
         
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
@@ -121,7 +121,7 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
         <span itemprop="name">tenzin namgyal</span>
       </span>
       
@@ -207,21 +207,17 @@
 <h3 id="Requests-with-Credentials"><a href="#Requests-with-Credentials" class="headerlink" title="Requests with Credentials"></a>Requests with Credentials</h3><p>XMLHttpRequest and Fetch requests can also make “credentialed” requests, which are aware of HTTP cookies and HTTP Authentication information. By default, in XHR or fetch invocations, browsers will not send credentials. The <code>.withCredentials</code> property must be set to true.</p>
 <p>`const invocation = new XMLHttpRequest();<br>const url = ‘<a href="http://bar.other/resources/credentialed-content/&#39;" target="_blank" rel="noopener">http://bar.other/resources/credentialed-content/&#39;</a>;</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callOtherDomain</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (invocation) &#123;</span><br><span class="line">    invocation.open(<span class="string">"GET"</span>, url, <span class="literal">true</span>);</span><br><span class="line">    invocation.withCredentials = <span class="literal">true</span>;</span><br><span class="line">    invocation.onreadystatechange = handler;</span><br><span class="line">    invocation.send();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>Since this is a simple <code>GET</code> request, it is not preflighted, but the browser will reject any response that does not have the <code>Access-Control-Allow-Credentials: true</code> header.</p>
 <p>Example exchange between client and server:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">GET /resources/access-control-with-credentials/ HTTP/1.1</span><br><span class="line">Host: bar.other</span><br><span class="line">User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-us,en;q=0.5</span><br><span class="line">Accept-Encoding: gzip,deflate</span><br><span class="line">Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Referer: http://foo.example/examples/credential.html</span><br><span class="line">Origin: http://foo.example</span><br><span class="line">Cookie: pageAccess=2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Date: Mon, 01 Dec 2008 01:34:52 GMT</span><br><span class="line">Server: Apache/2.0.61 (Unix) PHP/4.4.7 mod_ssl/2.0.61 OpenSSL/0.9.7e mod_fastcgi/2.4.2 DAV/2 SVN/1.4.2</span><br><span class="line">X-Powered-By: PHP/5.2.6</span><br><span class="line">Access-Control-Allow-Origin: http://foo.example</span><br><span class="line">Access-Control-Allow-Credentials: true</span><br><span class="line">Cache-Control: no-cache</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Set-Cookie: pageAccess=3; expires=Wed, 31-Dec-2008 01:34:53 GMT</span><br><span class="line">Vary: Accept-Encoding, Origin</span><br><span class="line">Content-Encoding: gzip</span><br><span class="line">Content-Length: 106</span><br><span class="line">Keep-Alive: timeout=2, max=100</span><br><span class="line">Connection: Keep-Alive</span><br><span class="line">Content-Type: text/plain</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[text/plain payload]</span><br></pre></td></tr></table></figure>
-
 <p>Because the request headers in the above response include a <code>Cookie</code> header, the request would fail if the value of the <code>Access-Control-Allow-Origin</code> header was ‘*‘.</p>
 <p>If the request failed, the <code>Set-Cookie</code> in the above response would create an exception error.</p>
 <p>Note that cookies set in CORS responses are subject to normal third-party cookie policies, and thus not be saved if the user has configured their browser to reject them.</p>
 <h2 id="HTTP-Request-Headers"><a href="#HTTP-Request-Headers" class="headerlink" title="HTTP Request Headers"></a>HTTP Request Headers</h2><p>The following headers are used by clients to make cross-origin HTTP requests.</p>
 <h3 id="Access-Control-Request-Method"><a href="#Access-Control-Request-Method" class="headerlink" title="Access-Control-Request-Method"></a>Access-Control-Request-Method</h3><p>The <code>Access-Control-Request-Method</code> is used when issuing a preflight request to let the server know what HTTP method will be used when the actual request is made.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Request-Method: &lt;method&gt;</span><br></pre></td></tr></table></figure>
-
 <h3 id="Access-Control-Request-Headers"><a href="#Access-Control-Request-Headers" class="headerlink" title="Access-Control-Request-Headers"></a>Access-Control-Request-Headers</h3><p>The <code>Access-Control-Request-Headers</code> header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Request-Headers: &lt;field-name&gt;[,&lt;field-name&gt;]*</span><br></pre></td></tr></table></figure>
-
 <h2 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h2><ul>
 <li>Internet Explorer 8 and 9 expose CORS via the <code>XDomainRequest</code> object, but have a full implementation in IE 10.</li>
 <li>While Firefox 3.5 introduced support for cross-site <code>XMLHttpRequests</code> and Web Fonts, certain requests were limited until later versions. Specifically, Firefox 7 introduced the ability for cross-site HTTP requests for WebGL Textures, and Firefox 9 added support for Images drawn on a canvas using <code>drawImage()</code>.</li>

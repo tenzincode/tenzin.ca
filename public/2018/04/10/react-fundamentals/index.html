@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://i.imgur.com/3LkFtGd.png">
 <meta property="og:image" content="http://blog.tenzin.com/images/reactrouter.png">
 <meta property="og:image" content="http://i.imgur.com/hQe7cs5.png">
-<meta property="og:updated_time" content="2019-05-15T20:30:11.900Z">
+<meta property="og:updated_time" content="2019-04-22T20:21:33.213Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react fundamentals">
 <meta name="twitter:description" content="Notes from the course by Tyler McGinnis  Intro to the React EcosystemTop qualities of React:  Composition everything in the React DOM is a component components are analogous to a container that wraps">
@@ -117,7 +117,7 @@
     
     <div class="content index width mx-auto px2 my4">
         
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
@@ -127,7 +127,7 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
         <span itemprop="name">tenzin namgyal</span>
       </span>
       
@@ -257,7 +257,6 @@
 <p>One can add scripts to package.json that can be run with the script name as argument to npm. These scripts can range from webpack productiont, webpack-dev-server to ava test scripts.</p>
 <p>From the example mentioned in NPM text section of this lesson:</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "test": "ava 'app/**/*.test.js' --verbose --require ./other/setup-ava-tests.js"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h2 id="Dataflow-with-props"><a href="#Dataflow-with-props" class="headerlink" title="Dataflow with props"></a>Dataflow with props</h2><p>We already know that props are the primary way to pass data into a component (when it is created a.k.a. invoked within a parent component or the ReactDOM.render method). In this lesson we got hands on practice with passing props like username, name and img url to a component from its creation in the ReactDOM.render method and its invocation in a parent component. We also replaced multiple props in a parent component with a single property which takes a javascript object.</p>
 <p><img src="/images/react.png" alt="React JS"></p>
 <p>In JSX a javascript expression can be written within single curly braces {<em>javascript goes here</em>}. The primary way to build list uis in React is to simply pass in an array or other iterator and use javascript’s functionality of map and filter, et cetera.</p>
@@ -420,9 +419,7 @@
 <p>The <code>Loading</code> component has two <code>props</code>: <code>text</code> and <code>speed</code> for which we provide default values and specify prop types. Users of the <code>Loading</code> component can either default on the text “Loading” with dots added to it every 300 miliseconds or change the text and the speed how they like.</p>
 <p>For the dot animation effect, we updated the component’s state continuosly between an interval specified by the <code>speed</code> prop; this happens in the life-cycle event <code>componentDidMount</code>. If we don’t clear this interval when the <code>componentWillUnmount</code> the state of this component will keep updating till the app’s instance shuts down. So the interval is referenced to a property <code>interval</code> of the component which is then used to clear the interval when the component unmounts.</p>
 <h2 id="Building-for-Production"><a href="#Building-for-Production" class="headerlink" title="Building for Production"></a>Building for Production</h2><p>When building our project for production, we’re gonna need the JavaScript in <code>index_bundle.js</code> to be minified and we’re gonna need React to be compiled for production (without warning and unnecessary console logs) rather than development.</p>
-<p>In order to achieve this, we modify the webpack configuration object exported from <code>webpack.config.js</code>.
-_ We conditionally add a couple items to the <code>plugins</code> property of the <code>config</code> object if the process’ <code>NODE_ENV</code> property says <code>&#39;production&#39;</code>.
-_ 1st item: we define a <code>new</code> plugin using <code>webpack.DefinePlugin</code> which makes the <code>NODE_ENV</code> property of <code>process.env</code> equal to <code>&#39;production&#39;</code>. <strong>This <code>NODE_ENV=&#39;production&#39;</code> is for the code that webpack is compiling.</strong> Whereas, the one in the condition, was for the code that compiles our project (i.e. the code in <code>webpack.config.js</code>). * 2nd item: an instance of <code>webpack.optimize.UglifyJsPlugin()</code> for webpack to minify and uglify all the JavaScript in <code>index_bundle.js</code>. This makes it impossible for other devs to imitate our application using dev tools.</p>
+<p>In order to achieve this, we modify the webpack configuration object exported from <code>webpack.config.js</code>.<br>_ We conditionally add a couple items to the <code>plugins</code> property of the <code>config</code> object if the process’ <code>NODE_ENV</code> property says <code>&#39;production&#39;</code>.<br>_ 1st item: we define a <code>new</code> plugin using <code>webpack.DefinePlugin</code> which makes the <code>NODE_ENV</code> property of <code>process.env</code> equal to <code>&#39;production&#39;</code>. <strong>This <code>NODE_ENV=&#39;production&#39;</code> is for the code that webpack is compiling.</strong> Whereas, the one in the condition, was for the code that compiles our project (i.e. the code in <code>webpack.config.js</code>). * 2nd item: an instance of <code>webpack.optimize.UglifyJsPlugin()</code> for webpack to minify and uglify all the JavaScript in <code>index_bundle.js</code>. This makes it impossible for other devs to imitate our application using dev tools.</p>
 <p>Lastly, we add a script <code>&quot;build&quot;</code> to the npm <code>&quot;scripts&quot;</code> in <code>package.json</code>; it says:<br><code>NODE_ENV=&#39;production&#39; webpack -p</code></p>
 <p>Now when we run <code>npm run build</code> from our project directory, webpack will build our project in the <code>dist</code> subdirectory of our project. The <code>NODE_ENV=&#39;production&#39;</code> is essential to pass the condition specified in <code>webpack.config.js</code> to add production plugins to the <code>config</code> object. <code>webpack -p</code> simply tells webpack to build for production.</p>
 <p><strong><em>Installing modules locally rather than globally</em></strong></p>
