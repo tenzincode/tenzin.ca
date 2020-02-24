@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="ParadigmsAll programming languages can be classified, based on their features, into some programming paradigm.  Some of these paradigms are concerned with implications for the execution model of the">
-<meta name="keywords" content="javascript,programming">
 <meta property="og:type" content="article">
 <meta property="og:title" content="programming paradigms">
 <meta property="og:url" content="http://blog.tenzin.com/2019/04/22/programming-paradigms/index.html">
 <meta property="og:site_name" content="tenzin namgyal">
 <meta property="og:description" content="ParadigmsAll programming languages can be classified, based on their features, into some programming paradigm.  Some of these paradigms are concerned with implications for the execution model of the">
-<meta property="og:locale" content="english">
 <meta property="og:image" content="http://blog.tenzin.com/images/paradigms.png">
-<meta property="og:updated_time" content="2019-04-23T19:43:16.994Z">
+<meta property="article:published_time" content="2019-04-22T14:49:18.000Z">
+<meta property="article:modified_time" content="2019-04-27T23:39:43.692Z">
+<meta property="article:author" content="tenzin">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="programming">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="programming paradigms">
-<meta name="twitter:description" content="ParadigmsAll programming languages can be classified, based on their features, into some programming paradigm.  Some of these paradigms are concerned with implications for the execution model of the">
 <meta name="twitter:image" content="http://blog.tenzin.com/images/paradigms.png">
     
     
@@ -41,11 +41,13 @@
     <!-- title -->
     <title>programming paradigms</title>
     <!-- styles -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
     <!-- rss -->
     
     
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
     
@@ -65,7 +67,7 @@
          
           <li><a href="/photography/">Photography</a></li>
          
-          <li><a href="http://github.com/citizenofearth">Projects</a></li>
+          <li><a href="http://github.com/citizenofearth" target="_blank" rel="noopener">Projects</a></li>
         
       </ul>
     </span>
@@ -131,7 +133,7 @@
       
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/javascript/">javascript</a>, <a class="tag-link" href="/tags/programming/">programming</a>
+        <a class="tag-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link" href="/tags/programming/" rel="tag">programming</a>
     </div>
 
 
@@ -148,7 +150,7 @@
 <p>Each statement changes the state of the program, from assigning values to each variable to the final addition of those values. Using a sequence of five statements the program is explicitly told how to add the numbers 5, 10 and 15 together.</p>
 <h3 id="Declarative"><a href="#Declarative" class="headerlink" title="Declarative"></a>Declarative</h3><p>Declarative programming focuses on WHAT to execute and defines program logic, but not a detailed control flow.  Main traits include fourth-generation languages, spreadsheets, and report program generators.  Example: SQL, regular expressions, Prolog.</p>
 <p>Declarative programs can be described as context independent. meaning they only declare what the ultimate goal is, not the intermediary steps to reach that goal.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">WITH patient_data AS (</span><br><span class="line">    <span class="keyword">SELECT</span> patient_id, patient_name, hospital, drug_dosage</span><br><span class="line">    <span class="keyword">FROM</span> hospital_registry</span><br><span class="line">    <span class="keyword">WHERE</span> (last_visit &amp;gt; now() - interval '14 days' OR last_visit IS NULL)</span><br><span class="line">    AND city = "Los Angeles"</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">WITH average_dosage AS (</span><br><span class="line">    <span class="keyword">SELECT</span> hospital, <span class="keyword">AVG</span>(drug_dosage) <span class="keyword">AS</span> Average</span><br><span class="line">    <span class="keyword">FROM</span> patient_data</span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> hospital</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">count</span>(hospital)</span><br><span class="line"><span class="keyword">FROM</span> average_dosage;</span><br><span class="line">WHERE AVG(drug_dosage) &amp;gt; 1000</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">WITH</span> patient_data <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> patient_id, patient_name, hospital, drug_dosage</span><br><span class="line">    <span class="keyword">FROM</span> hospital_registry</span><br><span class="line">    <span class="keyword">WHERE</span> (last_visit &amp;gt; now() - interval '14 days' OR last_visit IS NULL)</span><br><span class="line">    AND city = "Los Angeles"</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">WITH</span> average_dosage <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> hospital, <span class="keyword">AVG</span>(drug_dosage) <span class="keyword">AS</span> Average</span><br><span class="line">    <span class="keyword">FROM</span> patient_data</span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> hospital</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">count</span>(hospital)</span><br><span class="line"><span class="keyword">FROM</span> average_dosage;</span><br><span class="line">WHERE AVG(drug_dosage) &amp;gt; 1000</span><br></pre></td></tr></table></figure>
 
 <h3 id="Procedural"><a href="#Procedural" class="headerlink" title="Procedural"></a>Procedural</h3><p>Procedural programming specifies the steps a program must take to reach a desired state, usually read in order from top to bottom.  Main traits include local variables, sequence, selection, iteration, and modularization.  Example: C, C++, PHP, Python.</p>
 <figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">program</span> Fibonacci;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fib</span><span class="params">(n: Integer)</span>:</span> Integer;</span><br><span class="line"><span class="keyword">var</span> a: Integer = <span class="number">1</span>;</span><br><span class="line">    b: Integer = <span class="number">1</span>;</span><br><span class="line">    f: Integer;</span><br><span class="line">    i: Integer;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  <span class="keyword">if</span> (n = <span class="number">1</span>) <span class="keyword">or</span> (n = <span class="number">2</span>) <span class="keyword">then</span></span><br><span class="line">     fib := <span class="number">1</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">      <span class="keyword">for</span> i := <span class="number">3</span> <span class="keyword">to</span> n <span class="keyword">do</span></span><br><span class="line">      <span class="keyword">begin</span></span><br><span class="line">         f := a + b;</span><br><span class="line">         b := a;</span><br><span class="line">         a := f;</span><br><span class="line">      <span class="keyword">end</span>;</span><br><span class="line">      fib := f;</span><br><span class="line">    <span class="keyword">end</span>;</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  WriteLn(fib(<span class="number">6</span>));</span><br><span class="line"><span class="keyword">end</span>.</span><br></pre></td></tr></table></figure>
@@ -158,7 +160,6 @@
 
 <h3 id="Object-Oriented"><a href="#Object-Oriented" class="headerlink" title="Object-Oriented"></a>Object-Oriented</h3><p>Object-oriented programming (OOP) organizes programs as objects, which are data structures consisting of datafields and methods together with their interactions.  Main traits include objects, methods, message passing, information hiding, data abstraction, encapsulation, polymorphism, inheritance, serialization-marshalling.  Example: C++, C#, Java, PHP, Python, Ruby, Scala, JavaScript.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">firstName, lastName</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// construct the object using the arguments</span></span><br><span class="line">    <span class="keyword">this</span>.firstName = firstName;</span><br><span class="line">    <span class="keyword">this</span>.lastName = lastName;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// a method which returns the full name</span></span><br><span class="line">    <span class="keyword">this</span>.fullName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">" "</span> + <span class="keyword">this</span>.lastName;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myPerson = <span class="keyword">new</span> Person(<span class="string">"John"</span>, <span class="string">"Smith"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myPerson.fullName());</span><br></pre></td></tr></table></figure>
-
 
   </div>
 </article>
@@ -181,7 +182,7 @@
         
           <li><a href="/photography/">Photography</a></li>
         
-          <li><a href="http://github.com/citizenofearth">Projects</a></li>
+          <li><a href="http://github.com/citizenofearth" target="_blank" rel="noopener">Projects</a></li>
         
       </ul>
     </div>
@@ -221,7 +222,7 @@
     
     <footer id="footer">
   <div class="footer-left">
-    Copyright &copy; 2019 tenzin
+    Copyright &copy; 2020 tenzin
   </div>
   <div class="footer-right">
     <nav>
@@ -235,7 +236,7 @@
          
           <li><a href="/photography/">Photography</a></li>
          
-          <li><a href="http://github.com/citizenofearth">Projects</a></li>
+          <li><a href="http://github.com/citizenofearth" target="_blank" rel="noopener">Projects</a></li>
         
       </ul>
     </nav>
@@ -245,15 +246,31 @@
 </body>
 </html>
 <!-- styles -->
+
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
 <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+
+
 <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
 <link rel="stylesheet" href="/css/custom.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville.css">
+
 <!-- jquery -->
+
 <script src="/lib/jquery/jquery.min.js"></script>
+
+
 <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+
 <script src="/js/main.js"></script>
+
 <!-- Google Analytics -->
 
     <script type="text/javascript">
