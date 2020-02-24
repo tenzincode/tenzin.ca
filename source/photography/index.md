@@ -3,7 +3,7 @@ title: photography
 date: 2017-04-10 5:53:24
 ---
 
-_photos taken by me on canon 40d or minolta hi-matic 7s_
+_photos taken by me on canon 40d and minolta hi-matic 7s_
 
 ![alt text](../images/photography/01.jpg "camping on wolfe island in kingston, ontario")
 

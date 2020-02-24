@@ -9,24 +9,17 @@
   vertical-align: top
   text-align: center
   li
-    display: inline-block
+    display: block
     vertical-align: middle
-    margin-right: 15px
-    border-right: 1px solid #4a4a4a
+    margin-right: 10px
     a
-      margin-right: 15px
-  li:last-child
-    border-right: 0
-    margin-right: 0
-    a
-      margin-right: 0
+      margin-right: 10px
   a
     color: #666
   a:hover
     color: #999
   .footer-left
-    height: 20px
-    line-height: 20px
+    line-height: 45px
     vertical-align: middle
 
 @media (min-width: 39rem)
@@ -38,5 +31,8 @@
       line-height: 45px
     .footer-right
       float: right
-
-
+    li
+      display: inline-block
+      border-right: 1px solid #4a4a4a
+    li:last-child
+      border-right: none

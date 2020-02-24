@@ -1172,20 +1172,12 @@ article .content .caption {
   text-align: center;
 }
 #footer li {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
-  margin-right: 15px;
-  border-right: 1px solid #4a4a4a;
+  margin-right: 10px;
 }
 #footer li a {
-  margin-right: 15px;
-}
-#footer li:last-child {
-  border-right: 0;
-  margin-right: 0;
-}
-#footer li:last-child a {
-  margin-right: 0;
+  margin-right: 10px;
 }
 #footer a {
   color: #666;
@@ -1194,8 +1186,7 @@ article .content .caption {
   color: #999;
 }
 #footer .footer-left {
-  height: 20px;
-  line-height: 20px;
+  line-height: 45px;
   vertical-align: middle;
 }
 @media (min-width: 39rem) {
@@ -1209,6 +1200,13 @@ article .content .caption {
   }
   #footer .footer-right {
     float: right;
+  }
+  #footer li {
+    display: inline-block;
+    border-right: 1px solid #4a4a4a;
+  }
+  #footer li:last-child {
+    border-right: none;
   }
 }
 .highlight {
