@@ -1171,14 +1171,6 @@ article .content .caption {
   vertical-align: top;
   text-align: center;
 }
-#footer ul {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: 1fr 1fr;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 #footer li {
   display: inline-block;
   vertical-align: middle;
@@ -1213,6 +1205,7 @@ article .content .caption {
   }
   #footer .footer-left {
     float: left;
+    line-height: 45px;
   }
   #footer .footer-right {
     float: right;
