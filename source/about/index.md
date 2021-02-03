@@ -22,7 +22,7 @@ email : <a href="mailto:tenzin@tenzin.ca">tenzin[at]tenzin[dot]ca</a>
 
 <!-- PROFILE PIC -->
 
-<br>_an old photo of me_
+<br>_here's an old photo of me_
 ![alt text](../images/me.png "an old photo of me")
 
 <!-- /PROFILE PIC -->
