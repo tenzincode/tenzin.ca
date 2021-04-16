@@ -21,7 +21,7 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
-    "micromatch": "^4.0.2"
+    "micromatch": "^4.0.4"
   },
   "devDependencies": {
     "braces": "^3.0.2",
