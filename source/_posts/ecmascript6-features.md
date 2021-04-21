@@ -1,6 +1,6 @@
 ---
 title: ECMAScript 6 Features
-date: 2020-10-13 22:49:06
+date: 2021-04-20 22:49:06
 tags:
  - javascript
  - programming
@@ -1121,43 +1121,170 @@ Generator functions can support asynchronous programming in the style of "co-rou
 
 ECMAScript 6
 ```javascript
-// generic asynchonous 
+// generic asynchonous control-flow driver
+function async (proc, ...params) {
+    let iterator = proc(...params)
+    return new Promise((resolve, reject) => {
+        let loop = (value) => {
+            let result
+            try {
+                result = iterator.next(value)
+            }
+            catch (err) {
+                reject(err)
+            }
+            if (result.done)
+                resolve(result.value)
+            else if (typeof result.value === "object" && typeof result.value.then === "function")
+                result.value.then((value) => {
+                    loop(value)
+                }, (err) => {
+                    reject(err)
+                })
+            else
+                loop(result.value)
+        }
+        loop()
+    })
+}
+
+// application-specific asynchronous builder
+function makeAsync (text, after) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(text), after)
+    })
+}
+
+// application-specific asynchronous procedure
+async(function* (greeting) {
+    let foo = yield makeAsync("foo", 300)
+    let bar = yield makeAsync("bar", 200)
+    let baz = yield makeAsync("baz", 100)
+    return `${greeting} ${foo} ${bar} ${baz}`
+}, "Hello").then((msg) => {
+    console.log("RESULT:", msg) // "Hello foo bar baz"
+})
 ```
 
 ECMAScript 5
 ```javascript
+// no equivalent in ES5
 ```
+
+### Generator Methods
+Support for methods in classes and on objects, based on generator functions
 
 ECMAScript 6
 ```javascript
+class Clz {
+    * bar () {
+        ...
+    }
+}
+let Obj = {
+    * foo () {
+        ...
+    }
+}
 ```
 
 ECMAScript 5
 ```javascript
+// no equivalent in ES5
 ```
+
+## Map/Set & WeakMap/WeakSet
+
+### Set Data-Structure
+Cleaner data-structure for common algorithms based on sets.
 
 ECMAScript 6
 ```javascript
+let s = new Set()
+s.add("hello").add("goodbye").add("hello")
+s.size === 3
+s.has("hello") === true
+for (let key of s.values()) // insertion order
+    console.log(key)
 ```
 
 ECMAScript 5
 ```javascript
+var s = {};
+s["hello"] = true; s["goodbye"] = true; s["hello"] = true;
+Object.keys(s).length === 2
+s["hello"] === true;
+for (var key in s) // arbitrary order
+    if (s.hasOwnProperty(key))
+        console.log(s[key]);
 ```
+
+### Map Data-Structure
+Cleaner data-structure for common algorithms based on maps.
 
 ECMAScript 6
 ```javascript
+let m = new Map()
+let s = Symbol()
+m.set("hello", 42)
+m.set(s, 34)
+m.get(s) === 34
+m.size === 2
+for (let [ key, val ] of m.entries())
+    console.log(key + " = " + val)
 ```
 
 ECMAScript 5
 ```javascript
+var m = {};
+// no equivalent in ES5
+m["hello"] = 42;
+// no equivalent in ES5
+// no equivalent in ES5
+Objects.keys(m).length === 2;
+for (key in m) {
+    if (m.hasOwnProperty(key)) {
+        var val = m[key];
+        console.log(key + " = " + val);
+    }
+}
 ```
+
+### Weak-Link Data-Structures
+Memory-leak-free Object-key'd side-by-side data-structures.
 
 ECMAScript 6
 ```javascript
+let isMarked = new WeakSet()
+let attachedData = new WeakMap()
+
+export class Node {
+    constructor () { this.id = id }
+    mark () { isMarked.add(this) }
+    unmark () { isMarked.delete(this) }
+    marked () { return isMarked.has(this) }
+    set data (data) { attachedData.set(this, data) }
+    get data () { return attachedData.get(this) }
+}
+
+let foo = new Node("foo")
+
+JSON.stringify(foo) === '{ "id": "foo" }'
+foo.mark()
+foo.data = "bar"
+foo.data === "bar"
+JSON.stringify(foo) === '{ "id": "foo" }'
+
+isMarked.has(foo) === true
+attachedData.has(foo) === true
+foo = null /* remove only reference to foo */
+attachedData.has(foo) === false
+isMarked.has(foo) === false
 ```
 
 ECMAScript 5
 ```javascript
+// no equivalent in ES5
 ```
 
 ECMAScript 6
