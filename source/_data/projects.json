@@ -6,7 +6,7 @@
 	},
 	{
 		"name":"curriculum vitae",
-		"url":"#",
+		"url":"https://citizenofearth.github.io/tenzin.cv/",
 		"desc":"hire me"
 	},
 	{
@@ -15,28 +15,13 @@
 		"desc":"a brief portfolio"
 	},
 	{
+		"name":"marstemp",
+		"url":"https://github.com/citizenofearth/marstemp",
+		"desc":"weather app for mars written in react"
+	},
+	{
 		"name":"eve online",
 		"url":"https://github.com/citizenofearth/eve",
 		"desc":"musings on the scifi space simulator"
-	},
-	{
-		"name":"javascript patterns",
-		"url":"https://github.com/citizenofearth/javascript-patterns",
-		"desc":"common recipes for javascript"
-	},
-	{
-		"name":"todomvc",
-		"url":"https://github.com/citizenofearth/todomvc",
-		"desc":"basic todo app written in several front-end frameworks"
-	},
-	{
-		"name":"es6 features",
-		"url":"https://github.com/citizenofearth/es6features",
-		"desc":"overview of ecmascript 6"
-	},
-	{
-		"name":"d3",
-		"url":"https://github.com/citizenofearth/d3",
-		"desc":"data driven documents"
 	}
 ]

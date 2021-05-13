@@ -1,12 +1,12 @@
 {
-  "name": "hexo-site",
+  "name": "tenzin.ca",
   "version": "0.0.0",
   "private": true,
   "hexo": {
     "version": "5.4.0"
   },
   "dependencies": {
-    "eslint": "^7.25.0",
+    "eslint": "^7.26.0",
     "hexo": "^5.4.0",
     "hexo-cli": "^4.2.0",
     "hexo-deployer-ftpsync": "^0.1.1",
