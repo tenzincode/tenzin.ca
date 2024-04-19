@@ -441,7 +441,7 @@ html {
 }
 body {
   color: #000;
-  background-color: #fff;
+  background-color: #edf1f6;
   font-size: 12px;
   font-family: "Meslo LG", "Menlo", serif;
   font-weight: 400;
@@ -856,7 +856,7 @@ body {
   transition: opacity 0.2s;
   width: 100%;
   z-index: 5000000;
-  background: #fff;
+  background: #edf1f6;
   border-top: 1px solid #666673;
 }
 #footer-post a {
@@ -1210,68 +1210,70 @@ article .content .caption {
   }
 }
 .highlight {
-  color: #f8f8f2;
-  background: #23241f;
-}
-.highlight .code .highlight,
-.highlight .code .tag,
-.highlight .code .subst {
-  color: #f8f8f2;
-}
-.highlight .code .strong,
-.highlight .code .emphasis {
-  color: #a8a8a2;
-}
-.highlight .code .bullet,
-.highlight .code .quote,
-.highlight .code .number,
-.highlight .code .regexp,
-.highlight .code .literal,
-.highlight .code .link {
-  color: #ae81ff;
-}
-.highlight .code .code,
-.highlight .code .title,
-.highlight .code .section,
-.highlight .code .selector-class {
-  color: #a6e22e;
-}
-.highlight .code .strong {
-  font-weight: bold;
-}
-.highlight .code .emphasis {
-  font-style: italic;
+  color: #e0e2e4;
+  background: #282b2e;
 }
 .highlight .code .keyword,
 .highlight .code .selector-tag,
-.highlight .code .name,
-.highlight .code .attr {
-  color: #f92672;
+.highlight .code .literal,
+.highlight .code .selector-id {
+  color: #93c763;
 }
-.highlight .code .symbol,
+.highlight .code .number {
+  color: #ffcd22;
+}
 .highlight .code .attribute {
-  color: #66d9ef;
+  color: #668bb0;
 }
-.highlight .code .params,
-.highlight .code .class .title {
-  color: #f8f8f2;
+.highlight .code .code,
+.highlight .code .class .title,
+.highlight .code .section {
+  color: #fff;
 }
-.highlight .code .string,
+.highlight .code .regexp,
+.highlight .code .link {
+  color: #d39745;
+}
+.highlight .code .meta {
+  color: #557182;
+}
+.highlight .code .tag,
+.highlight .code .name,
+.highlight .code .bullet,
+.highlight .code .subst,
+.highlight .code .emphasis,
 .highlight .code .type,
 .highlight .code .built_in,
-.highlight .code .builtin-name,
-.highlight .code .selector-id,
 .highlight .code .selector-attr,
 .highlight .code .selector-pseudo,
 .highlight .code .addition,
 .highlight .code .variable,
+.highlight .code .template-tag,
 .highlight .code .template-variable {
-  color: #e6db74;
+  color: #8cbbad;
+}
+.highlight .code .string,
+.highlight .code .symbol {
+  color: #ec7600;
 }
 .highlight .code .comment,
-.highlight .code .deletion,
-.highlight .code .meta {
-  color: #75715e;
+.highlight .code .quote,
+.highlight .code .deletion {
+  color: #818e96;
+}
+.highlight .code .selector-class {
+  color: #a082bd;
+}
+.highlight .code .keyword,
+.highlight .code .selector-tag,
+.highlight .code .literal,
+.highlight .code .doctag,
+.highlight .code .title,
+.highlight .code .section,
+.highlight .code .type,
+.highlight .code .name,
+.highlight .code .strong {
+  font-weight: bold;
 }
 pre {
   font-family: "Meslo LG", "Menlo", monospace;
