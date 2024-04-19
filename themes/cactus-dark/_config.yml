@@ -33,7 +33,7 @@ customize:
         linkedin: https://www.linkedin.com/in/tenzinnamgyal/
         instagram: https://instagram.com/thetibetian
     post_count: 50
-    highlight: monokai-sublime
+    highlight: obsidian
 
 # RSS
 rss: false
