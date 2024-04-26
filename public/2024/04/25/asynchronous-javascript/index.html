@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="These days user experiences are expected to be seamless and responsive, which makes asynchronous JavaScript programming pretty essential. Asynchronous programming allows JavaScript to execute multipl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="asynchronous javascript">
+<meta property="og:url" content="http://www.tenzin.ca/2024/04/25/asynchronous-javascript/index.html">
+<meta property="og:site_name" content="tenzin namgyal">
+<meta property="og:description" content="These days user experiences are expected to be seamless and responsive, which makes asynchronous JavaScript programming pretty essential. Asynchronous programming allows JavaScript to execute multipl">
+<meta property="og:locale">
+<meta property="og:image" content="http://www.tenzin.ca/images/async.gif">
+<meta property="article:published_time" content="2024-04-25T17:20:12.000Z">
+<meta property="article:modified_time" content="2024-04-26T01:44:17.317Z">
+<meta property="article:author" content="tenzin">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="programming">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.tenzin.ca/images/async.gif">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>asynchronous javascript</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/photography/">Photography</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://github.com/citizenofearth">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2024/04/19/typescript/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="https://twitter.com/share?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&text=asynchronous javascript"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://www.linkedin.com/shareArticle?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&is_video=false&description=asynchronous javascript"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="mailto:?subject=asynchronous javascript&body=Check out this article: http://www.tenzin.ca/2024/04/25/asynchronous-javascript/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="https://getpocket.com/save?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://reddit.com/submit?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://www.stumbleupon.com/submit?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://digg.com/submit?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://www.tumblr.com/share/link?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&name=asynchronous javascript&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-it"><span class="toc-number">1.</span> <span class="toc-text">What is it?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Benefits"><span class="toc-number">2.</span> <span class="toc-text">Benefits</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Improved-Performance"><span class="toc-number">2.1.</span> <span class="toc-text">Improved Performance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Responsive-User-Interface"><span class="toc-number">2.2.</span> <span class="toc-text">Responsive User Interface</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Efficient-Resource-Utilization"><span class="toc-number">2.3.</span> <span class="toc-text">Efficient Resource Utilization</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Techniques"><span class="toc-number">3.</span> <span class="toc-text">Techniques</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Callbacks"><span class="toc-number">3.1.</span> <span class="toc-text">Callbacks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promises"><span class="toc-number">3.2.</span> <span class="toc-text">Promises</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Async-Await"><span class="toc-number">3.3.</span> <span class="toc-text">Async&#x2F;Await</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Best-Practices"><span class="toc-number">4.</span> <span class="toc-text">Best Practices</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-Promises-or-Async-Await"><span class="toc-number">4.1.</span> <span class="toc-text">Use Promises or Async&#x2F;Await</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Graceful-Error-Handling"><span class="toc-number">4.2.</span> <span class="toc-text">Graceful Error Handling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Avoid-Nesting"><span class="toc-number">4.3.</span> <span class="toc-text">Avoid Nesting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Optimize-Performance"><span class="toc-number">4.4.</span> <span class="toc-text">Optimize Performance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stay-Consistent"><span class="toc-number">4.5.</span> <span class="toc-text">Stay Consistent</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Real-World-Applications"><span class="toc-number">5.</span> <span class="toc-text">Real-World Applications</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-Requests"><span class="toc-number">5.1.</span> <span class="toc-text">HTTP Requests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#User-Input-Handling"><span class="toc-number">5.2.</span> <span class="toc-text">User Input Handling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Processing"><span class="toc-number">5.3.</span> <span class="toc-text">Data Processing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Event-Handling"><span class="toc-number">5.4.</span> <span class="toc-text">Event Handling</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        asynchronous javascript
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">tenzin namgyal</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2024-04-25T17:20:12.000Z" itemprop="datePublished">2024-04-25</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link-link" href="/tags/programming/" rel="tag">programming</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><img src="/images/async.gif" alt="asynchronous javascript"></p>
+<p>These days user experiences are expected to be seamless and responsive, which makes asynchronous JavaScript programming pretty essential. Asynchronous programming allows JavaScript to execute multiple tasks concurrently, enabling developers to create dynamic and interactive web applications.  Let’s dive into it!</p>
+<h2 id="What-is-it"><a href="#What-is-it" class="headerlink" title="What is it?"></a>What is it?</h2><p>At its core, JavaScript is a single-threaded language, meaning it can only execute one task at a time. However, asynchronous programming allows JavaScript to perform non-blocking operations, where certain tasks can execute independently of the main execution thread. This prevents the browser from becoming unresponsive while waiting for time-consuming operations to complete, like fetching data from a server or processing large datasets.  Here’s a simple example:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Start&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Async task completed after 2 seconds&quot;</span>);</span><br><span class="line">&#125;, <span class="number">2000</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;End&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>In this code snippet, “Start” and “End” are logged immediately, while the callback function inside setTimeout() executes asynchronously after a delay of 2 seconds.</p>
+<h2 id="Benefits"><a href="#Benefits" class="headerlink" title="Benefits"></a>Benefits</h2><h3 id="Improved-Performance"><a href="#Improved-Performance" class="headerlink" title="Improved Performance"></a>Improved Performance</h3><p>By executing tasks concurrently, asynchronous programming enhances the performance of web applications, resulting in faster response times and smoother user experiences.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fetchData</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">resolve</span>(<span class="string">&quot;Data fetched successfully&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">3000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Fetching data...&quot;</span>);</span><br><span class="line"><span class="title function_">fetchData</span>().<span class="title function_">then</span>(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Responsive-User-Interface"><a href="#Responsive-User-Interface" class="headerlink" title="Responsive User Interface"></a>Responsive User Interface</h3><p>Asynchronous operations prevent the user interface from freezing, ensuring that users can continue interacting with the application while tasks are being processed in the background.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">validateInput</span> = (<span class="params">input</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (input.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="title function_">resolve</span>(<span class="string">&quot;Input is valid&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="title function_">reject</span>(<span class="string">&quot;Input is invalid&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Validating input...&quot;</span>);</span><br><span class="line"><span class="title function_">validateInput</span>(<span class="string">&quot;username&quot;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">error</span>(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Efficient-Resource-Utilization"><a href="#Efficient-Resource-Utilization" class="headerlink" title="Efficient Resource Utilization"></a>Efficient Resource Utilization</h3><p>Asynchronous programming allows JavaScript to utilize system resources more efficiently by minimizing idle time and maximizing CPU utilization.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">processTasks</span> = <span class="keyword">async</span> (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> data1 = <span class="keyword">await</span> <span class="title function_">fetchData</span>();</span><br><span class="line">    <span class="keyword">const</span> data2 = <span class="keyword">await</span> <span class="title function_">fetchData</span>();</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Data 1:&quot;</span>, data1);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Data 2:&quot;</span>, data2);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="title function_">processTasks</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Techniques"><a href="#Techniques" class="headerlink" title="Techniques"></a>Techniques</h2><h3 id="Callbacks"><a href="#Callbacks" class="headerlink" title="Callbacks"></a>Callbacks</h3><p>Callbacks are one of the oldest and most widely used asynchronous programming techniques in JavaScript. A callback function is passed as an argument to another function and is executed once the asynchronous operation completes. While effective, nested callbacks can lead to “callback hell”, making code difficult to read and maintain.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fetchData</span> = (<span class="params">callback</span>) =&gt; &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">callback</span>(<span class="string">&quot;Data fetched successfully&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">2000</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Fetching data...&quot;</span>);</span><br><span class="line"><span class="title function_">fetchData</span>(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Promises"><a href="#Promises" class="headerlink" title="Promises"></a>Promises</h3><p>Promises were introduced to address the drawbacks of callback-based asynchronous programming. A promise represents the eventual completion or failure of an asynchronous operation, allowing developers to chain multiple asynchronous tasks together using <code>.then()</code> and <code>.catch()</code> methods. Promises offer better error handling and readability compared to callbacks.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fetchData</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">resolve</span>(<span class="string">&quot;Data fetched successfully&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">2000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Fetching data...&quot;</span>);</span><br><span class="line"><span class="title function_">fetchData</span>().<span class="title function_">then</span>(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Async-Await"><a href="#Async-Await" class="headerlink" title="Async&#x2F;Await"></a>Async&#x2F;Await</h3><p>Async&#x2F;await is a modern addition to JavaScript introduced in ES2017 (ES8). It provides a more concise and synchronous-looking syntax for writing asynchronous code. Async functions return a promise implicitly, allowing developers to use the <code>await</code> keyword to pause execution until a promise is resolved or rejected. Async&#x2F;await simplifies asynchronous programming and reduces the complexity of error handling.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fetchData</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">resolve</span>(<span class="string">&quot;Data fetched successfully&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">2000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">fetchDataAsync</span> = <span class="keyword">async</span> (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Fetching data...&quot;</span>);</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> <span class="title function_">fetchData</span>();</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="title function_">fetchDataAsync</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Best-Practices"><a href="#Best-Practices" class="headerlink" title="Best Practices"></a>Best Practices</h2><h3 id="Use-Promises-or-Async-Await"><a href="#Use-Promises-or-Async-Await" class="headerlink" title="Use Promises or Async&#x2F;Await"></a>Use Promises or Async&#x2F;Await</h3><p>Whenever possible, prefer using promises or async&#x2F;await syntax over callbacks to improve code readability and maintainability.</p>
+<h3 id="Graceful-Error-Handling"><a href="#Graceful-Error-Handling" class="headerlink" title="Graceful Error Handling"></a>Graceful Error Handling</h3><p>Always implement error handling mechanisms, such as <code>.catch()</code> for promises or try&#x2F;catch blocks for async&#x2F;await, to gracefully handle errors and prevent application crashes.</p>
+<h3 id="Avoid-Nesting"><a href="#Avoid-Nesting" class="headerlink" title="Avoid Nesting"></a>Avoid Nesting</h3><p>Minimize callback nesting by utilizing techniques such as promise chaining or async&#x2F;await to improve code readability and avoid callback hell.</p>
+<h3 id="Optimize-Performance"><a href="#Optimize-Performance" class="headerlink" title="Optimize Performance"></a>Optimize Performance</h3><p>Be mindful of performance implications when working with asynchronous operations, such as minimizing unnecessary network requests and optimizing resource usage.</p>
+<h3 id="Stay-Consistent"><a href="#Stay-Consistent" class="headerlink" title="Stay Consistent"></a>Stay Consistent</h3><p>Choose a consistent approach for asynchronous programming throughout your codebase to maintain code clarity and facilitate collaboration among team members.</p>
+<h2 id="Real-World-Applications"><a href="#Real-World-Applications" class="headerlink" title="Real-World Applications"></a>Real-World Applications</h2><h3 id="HTTP-Requests"><a href="#HTTP-Requests" class="headerlink" title="HTTP Requests"></a>HTTP Requests</h3><p>Asynchronous programming is commonly used for making HTTP requests to fetch data from servers in web applications. Libraries like Axios and Fetch API leverage asynchronous techniques to perform network operations efficiently.</p>
+<h3 id="User-Input-Handling"><a href="#User-Input-Handling" class="headerlink" title="User Input Handling"></a>User Input Handling</h3><p>Asynchronous programming enables real-time validation and processing of user input without blocking the main thread, ensuring a responsive user interface.</p>
+<h3 id="Data-Processing"><a href="#Data-Processing" class="headerlink" title="Data Processing"></a>Data Processing</h3><p>Asynchronous JavaScript is utilized for processing large datasets, performing computationally intensive tasks, and handling complex operations without causing performance bottlenecks.</p>
+<h3 id="Event-Handling"><a href="#Event-Handling" class="headerlink" title="Event Handling"></a>Event Handling</h3><p>Asynchronous programming is essential for handling events in web applications, such as user interactions, DOM events, and asynchronous I&#x2F;O operations.</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/photography/">Photography</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/citizenofearth">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-it"><span class="toc-number">1.</span> <span class="toc-text">What is it?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Benefits"><span class="toc-number">2.</span> <span class="toc-text">Benefits</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Improved-Performance"><span class="toc-number">2.1.</span> <span class="toc-text">Improved Performance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Responsive-User-Interface"><span class="toc-number">2.2.</span> <span class="toc-text">Responsive User Interface</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Efficient-Resource-Utilization"><span class="toc-number">2.3.</span> <span class="toc-text">Efficient Resource Utilization</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Techniques"><span class="toc-number">3.</span> <span class="toc-text">Techniques</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Callbacks"><span class="toc-number">3.1.</span> <span class="toc-text">Callbacks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promises"><span class="toc-number">3.2.</span> <span class="toc-text">Promises</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Async-Await"><span class="toc-number">3.3.</span> <span class="toc-text">Async&#x2F;Await</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Best-Practices"><span class="toc-number">4.</span> <span class="toc-text">Best Practices</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-Promises-or-Async-Await"><span class="toc-number">4.1.</span> <span class="toc-text">Use Promises or Async&#x2F;Await</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Graceful-Error-Handling"><span class="toc-number">4.2.</span> <span class="toc-text">Graceful Error Handling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Avoid-Nesting"><span class="toc-number">4.3.</span> <span class="toc-text">Avoid Nesting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Optimize-Performance"><span class="toc-number">4.4.</span> <span class="toc-text">Optimize Performance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stay-Consistent"><span class="toc-number">4.5.</span> <span class="toc-text">Stay Consistent</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Real-World-Applications"><span class="toc-number">5.</span> <span class="toc-text">Real-World Applications</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-Requests"><span class="toc-number">5.1.</span> <span class="toc-text">HTTP Requests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#User-Input-Handling"><span class="toc-number">5.2.</span> <span class="toc-text">User Input Handling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Processing"><span class="toc-number">5.3.</span> <span class="toc-text">Data Processing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Event-Handling"><span class="toc-number">5.4.</span> <span class="toc-text">Event Handling</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="https://twitter.com/share?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&text=asynchronous javascript"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://www.linkedin.com/shareArticle?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&is_video=false&description=asynchronous javascript"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="mailto:?subject=asynchronous javascript&body=Check out this article: http://www.tenzin.ca/2024/04/25/asynchronous-javascript/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="https://getpocket.com/save?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://reddit.com/submit?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://www.stumbleupon.com/submit?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://digg.com/submit?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&title=asynchronous javascript"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" href="http://www.tumblr.com/share/link?url=http://www.tenzin.ca/2024/04/25/asynchronous-javascript/&name=asynchronous javascript&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').slideToggle();$('#share-footer').slideUp();$('#nav-footer').slideUp();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> Contents</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#toc-footer').slideUp();$('#share-footer').slideToggle();$('#nav-footer').slideUp();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#toc-footer').slideUp();$('#share-footer').slideUp();$('#nav-footer').slideToggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    copyright &copy; 2024 tenzin
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/photography/">Photography</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://github.com/citizenofearth">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville.css">
+
+<!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+

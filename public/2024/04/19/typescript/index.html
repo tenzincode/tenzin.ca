@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="TypeScript is a superset of JavaScript that adds optional static typing to the language, allowing developers to catch errors early in the development process and write more robust code. BenefitsStati">
+    <meta name="description" content="TypeScript is a superset of JavaScript that adds optional static typing to the language, allowing developers to catch errors early in the development process and write more robust code.  It enhances">
 <meta property="og:type" content="article">
 <meta property="og:title" content="typescript">
 <meta property="og:url" content="http://www.tenzin.ca/2024/04/19/typescript/index.html">
 <meta property="og:site_name" content="tenzin namgyal">
-<meta property="og:description" content="TypeScript is a superset of JavaScript that adds optional static typing to the language, allowing developers to catch errors early in the development process and write more robust code. BenefitsStati">
+<meta property="og:description" content="TypeScript is a superset of JavaScript that adds optional static typing to the language, allowing developers to catch errors early in the development process and write more robust code.  It enhances">
 <meta property="og:locale">
 <meta property="og:image" content="http://www.tenzin.ca/images/typescript.png">
 <meta property="article:published_time" content="2024-04-19T18:00:37.000Z">
-<meta property="article:modified_time" content="2024-04-19T18:43:54.659Z">
+<meta property="article:modified_time" content="2024-04-26T00:44:57.542Z">
 <meta property="article:author" content="tenzin">
 <meta property="article:tag" content="javascript">
 <meta property="article:tag" content="programming">
@@ -76,6 +76,8 @@
     <br/>
     <span id="actions">
       <ul>
+        
+        <li><a class="icon" href="/2024/04/25/asynchronous-javascript/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
         
         
         <li><a class="icon" href="/2021/04/21/ecmascript6-2/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
@@ -145,7 +147,7 @@
 
   <div class="content" itemprop="articleBody">
     <p><img src="/images/typescript.png" alt="TypeScript"></p>
-<p>TypeScript is a superset of JavaScript that adds optional static typing to the language, allowing developers to catch errors early in the development process and write more robust code.</p>
+<p>TypeScript is a superset of JavaScript that adds optional static typing to the language, allowing developers to catch errors early in the development process and write more robust code.  It enhances JavaScript by providing static types, enabling better code understanding, error detection, and tooling support, while still compiling down to plain JavaScript that runs in any browser or environment.</p>
 <h2 id="Benefits"><a href="#Benefits" class="headerlink" title="Benefits"></a>Benefits</h2><h3 id="Static-Typing"><a href="#Static-Typing" class="headerlink" title="Static Typing"></a>Static Typing</h3><p>TypeScript allows developers to define types for variables, parameters, and return values. This helps catch type-related errors during development rather than at runtime, leading to more robust code.</p>
 <h3 id="Enhanced-Code-Readability"><a href="#Enhanced-Code-Readability" class="headerlink" title="Enhanced Code Readability"></a>Enhanced Code Readability</h3><p>Type annotations serve as documentation for the codebase, making it easier for developers to understand the structure and expected data types of variables and functions.</p>
 <h3 id="Early-Error-Detection"><a href="#Early-Error-Detection" class="headerlink" title="Early Error Detection"></a>Early Error Detection</h3><p>Type checking at compile time helps catch errors such as type mismatches, misspelled property names, and function arity issues before running the code, reducing debugging time and improving overall code quality.</p>
@@ -161,7 +163,6 @@
 <h3 id="Type-Inference"><a href="#Type-Inference" class="headerlink" title="Type Inference"></a>Type Inference</h3><p>   TypeScript can infer types based on the value assigned.<br>   <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> inference = <span class="number">42</span>; <span class="comment">// Type inferred as number</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="Union-Types"><a href="#Union-Types" class="headerlink" title="Union Types"></a>Union Types</h3><p>   Allows a value to be one of several types.<br>   <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">mixed</span>: <span class="built_in">number</span> | <span class="built_in">string</span>;</span><br><span class="line">mixed = <span class="number">10</span>;    <span class="comment">// OK</span></span><br><span class="line">mixed = <span class="string">&quot;hi&quot;</span>;  <span class="comment">// OK</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="Type-Assertions"><a href="#Type-Assertions" class="headerlink" title="Type Assertions"></a>Type Assertions</h3><p>   Allows you to override TypeScript’s inference or checks.<br>   <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">value</span>: <span class="built_in">any</span> = <span class="string">&quot;this is a string&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="attr">length</span>: <span class="built_in">number</span> = (value <span class="keyword">as</span> <span class="built_in">string</span>).<span class="property">length</span>;</span><br></pre></td></tr></table></figure></p>
-<p>TypeScript enhances JavaScript by providing static types, enabling better code understanding, error detection, and tooling support, while still compiling down to plain JavaScript that runs in any browser or environment.</p>
 
   </div>
 </article>
