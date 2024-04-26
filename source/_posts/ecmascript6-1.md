@@ -1,5 +1,5 @@
 ---
-title: ECMAScript 6 Features - Part 1
+title: ecmascript 6 features - part 1
 date: 2021-04-20 22:49:06
 tags:
  - javascript
@@ -377,7 +377,7 @@ obj = {
     },
     bar: function (x, y) {
         ...
-    }, 
+    },
     // quux: no equivalent in ES5
 }
 ```

@@ -1,5 +1,5 @@
 ---
-title: ECMAScript 6 Features - Part 2
+title: ecmascript 6 features - part 2
 date: 2021-04-21 17:30:19
 tags:
  - javascript
@@ -218,7 +218,7 @@ ECMAScript 5
 ```
 
 ### Generator Control-Flow
-Generator functions can support asynchronous programming in the style of "co-routines" in combination with promises.  
+Generator functions can support asynchronous programming in the style of "co-routines" in combination with promises.
 
 ECMAScript 6
 ```javascript

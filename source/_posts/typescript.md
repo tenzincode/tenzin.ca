@@ -9,7 +9,7 @@ tags:
 
 ![TypeScript](/images/typescript.png)
 
-TypeScript is a superset of JavaScript that adds optional static typing to the language, allowing developers to catch errors early in the development process and write more robust code.
+TypeScript is a superset of JavaScript that adds optional static typing to the language, allowing developers to catch errors early in the development process and write more robust code.  It enhances JavaScript by providing static types, enabling better code understanding, error detection, and tooling support, while still compiling down to plain JavaScript that runs in any browser or environment.
 
 ## Benefits
 
@@ -115,5 +115,3 @@ Overall, TypeScript empowers developers to write safer, more maintainable code w
    let value: any = "this is a string";
    let length: number = (value as string).length;
    ```
-
-TypeScript enhances JavaScript by providing static types, enabling better code understanding, error detection, and tooling support, while still compiling down to plain JavaScript that runs in any browser or environment.
