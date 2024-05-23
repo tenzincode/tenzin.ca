@@ -6,7 +6,7 @@
 	},
 	{
 		"name":"curriculum vitae",
-		"url":"https://citizenofearth.github.io/tenzin.cv/",
+		"url":"https://tenzincode.github.io/tenzin.cv/",
 		"desc":"hire me"
 	},
 	{
@@ -16,12 +16,12 @@
 	},
 	{
 		"name":"marstemp",
-		"url":"https://github.com/citizenofearth/marstemp",
+		"url":"https://github.com/tenzincode/marstemp",
 		"desc":"weather app for mars written in react"
 	},
 	{
 		"name":"eve online",
-		"url":"https://github.com/citizenofearth/eve",
+		"url":"https://github.com/tenzincode/eve",
 		"desc":"musings on the scifi space simulator"
 	}
 ]

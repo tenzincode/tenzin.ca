@@ -7,7 +7,7 @@ i'm a web developer born in winnipeg and currently living in montreal.  i comple
 
 <!-- CV -->
 
-[**→ curriculum vitae** (/kəˈrɪkjᵿləm ˈviːtaɪ/, /ˈwiːtaɪ/, or /ˈvaɪtiː/)](https://citizenofearth.github.io/tenzin.cv/)
+[**→ curriculum vitae** (/kəˈrɪkjᵿləm ˈviːtaɪ/, /ˈwiːtaɪ/, or /ˈvaɪtiː/)](https://tenzincode.github.io/tenzin.cv/)
 
 <!-- /CV -->
 

@@ -3,9 +3,9 @@ nav:
   About: /about/
   Writing: /archives/
   Photography: /photography/
-  Projects: http://github.com/citizenofearth
+  Projects: http://github.com/tenzincode
 
-projects_url: http://github.com/citizenofearth
+projects_url: http://github.com/tenzincode
 
 customize:
     gravatar:
