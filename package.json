@@ -5,6 +5,12 @@
   "hexo": {
     "version": "7.3.0"
   },
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "start": "hexo server"
+  },
   "dependencies": {
     "hexo": "7.3.0",
     "hexo-generator-archive": "2.0.0",
