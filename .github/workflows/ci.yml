@@ -2,8 +2,8 @@ name: Daily Package Update and Build
 
 on:
   schedule:
-    # Run at 12:00 PM Eastern Standard Time (17:00 UTC) every weekday (Monday to Friday)
-    - cron: '0 17 * * 1-5'
+    # Run at 09:00 AM Eastern Standard Time (13:00 UTC) every weekday (Monday to Friday)
+    - cron: '0 13 * * 1-5'
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
