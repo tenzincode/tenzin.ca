@@ -12,7 +12,6 @@
     "start": "hexo server"
   },
   "dependencies": {
-    "@vercel/analytics": "^2.0.1",
     "hexo": "^8.1.2",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",

@@ -2,6 +2,11 @@
 <%- js('lib/jquery/jquery.min') %>
 <%- js('lib/justified-gallery/jquery.justifiedGallery.min.js') %>
 <%- js('js/main') %>
+<!-- Vercel Web Analytics -->
+<script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <!-- Google Analytics -->
 <% if (theme.plugins.google_analytics){ %>
     <script type="text/javascript">

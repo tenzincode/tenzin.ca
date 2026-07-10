@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://www.tenzin.ca/images/reactrouter.png">
 <meta property="og:image" content="http://i.imgur.com/hQe7cs5.png">
 <meta property="article:published_time" content="2018-04-10T15:22:07.000Z">
-<meta property="article:modified_time" content="2026-07-09T16:03:43.384Z">
+<meta property="article:modified_time" content="2024-05-13T17:03:38.850Z">
 <meta property="article:author" content="tenzin">
 <meta property="article:tag" content="javascript">
 <meta property="article:tag" content="react">
@@ -264,7 +264,7 @@
 <h2 id="Dataflow-with-props"><a href="#Dataflow-with-props" class="headerlink" title="Dataflow with props"></a>Dataflow with props</h2><p>We already know that props are the primary way to pass data into a component (when it is created a.k.a. invoked within a parent component or the ReactDOM.render method). In this lesson we got hands on practice with passing props like username, name and img url to a component from its creation in the ReactDOM.render method and its invocation in a parent component. We also replaced multiple props in a parent component with a single property which takes a javascript object.</p>
 <p><img src="/images/react.png" alt="React JS"></p>
 <p>In JSX a javascript expression can be written within single curly braces {<em>javascript goes here</em>}. The primary way to build list uis in React is to simply pass in an array or other iterator and use javascript’s functionality of map and filter, et cetera.</p>
-<p>When rendering list items in jsx (<code>&lt;li&gt; &#123;something&#125; &lt;/li&gt;</code>), React gives us a warning saying that we should add a unique key prop value pair to each list item. This allows React to keep track of changes in the list and reflect them on the ui in an efficient manner. Particularly for items that have been added or removed from the list. The value of the key prop should be a unique identifier for that item in the list (be careful using the index argument in filter and maps callback function, since the index for each item keep changing depending on the number of items in the iterative).</p>
+<p>When rendering list items in jsx (<code>&lt;li&gt; {something} &lt;/li&gt;</code>), React gives us a warning saying that we should add a unique key prop value pair to each list item. This allows React to keep track of changes in the list and reflect them on the ui in an efficient manner. Particularly for items that have been added or removed from the list. The value of the key prop should be a unique identifier for that item in the list (be careful using the index argument in filter and maps callback function, since the index for each item keep changing depending on the number of items in the iterative).</p>
 <h2 id="Pure-functions-f-d-v-Props-and-nesting-components-in-React"><a href="#Pure-functions-f-d-v-Props-and-nesting-components-in-React" class="headerlink" title="Pure functions. f(d)=v. Props and nesting components in React."></a>Pure functions. <code>f(d)=v</code>. Props and nesting components in React.</h2><p><strong><em>Nested components and props</em></strong></p>
 <p>Props are to components what arguments are to functions. Props are the way in which a parent components passes data to its child component. When specifying a component in JSX (invoking a component), a property value can be passed in the component in a way that looks similar to an attribute&#x3D;“value” pair in HTML tags.</p>
 <p><strong><em>Building UIs with pure functions and function compositions in React</em></strong></p>
@@ -540,6 +540,11 @@
 
 <script src="/js/main.js"></script>
 
+<!-- Vercel Web Analytics -->
+<script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <!-- Google Analytics -->
 
 <!-- Disqus Comments -->
